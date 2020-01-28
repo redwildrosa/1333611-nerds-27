@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Роза Лебедева](https://up.htmlacademy.ru/htmlcss/27/user/1333611).
-* Наставник: `Неизвестно`.
+* Наставник: [Екатерина Киреева](https://htmlacademy.ru/profile/ekateric).
 
 ---
 
