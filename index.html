@@ -31,7 +31,7 @@
       
       <!-- Слайдер  -->
       <section>
-        <h2>Статьи о нашей работе</h2>
+        <h2 class="visually-hidden">Статьи о нашей работе</h2>
 
         <article>
           <h3>Долго, дорого, скрупулезно.</h3>
@@ -60,42 +60,42 @@
       <!-- /слайдер -->
 
       <section>
-        <h2>Список услуг</h2>
+        <h2 class="visually-hidden">Список услуг</h2>
 
         <ul>
           <li>
             <h3>
-              <a href="">Веб-сайты</a>
+              <a href="">Веб-сайты</a> <!-- ссылка Статья/каталог Веб-сайты -->
             </h3>
             <p>
               Мир никогда не будет прежним после того как увидит ваш сайт!
             </p>
-            <a href="">Заказать</a>
+            <button type="button">Заказать</button> <!-- ??? открывает попап Напишите нам -->
           </li>
           <li>
             <h3>
-              <a href="">Приложения</a>
+              <a href="">Приложения</a> <!-- ссылка Статья/каталог Приложения -->
             </h3>
             <p>
               Покорите топ-10 приложений в AppStore и Google Play
             </p>
-            <a href="">Заказать</a>
+            <button type="button">Заказать</button> <!-- ??? открывает попап Напишите нам -->
           </li>
           <li>
             <h3>
-              <a href="">Презентации</a>
+              <a href="">Презентации</a> <!-- ссылка Статья-услуга Презентации -->
             </h3>
             <p>
               Вы даже не подозреваете, насколько вы изумительны!
             </p>
-            <a href="">Заказать</a>
+            <button type="button">Заказать</button> <!-- ??? открывает попап Напишите нам -->
           </li>
         </ul>
       </section>
 
-      <!-- ??? О нас - основная статья страницы?  -->
+      <!-- О нас - основная статья страницы -->
       <article>
-        <h2>О нас</h2> <!-- ??? Скрытие заголовка?  не display: none, его читалки игнорируют. Есть такой паттерн visually hidden -->
+        <h2 class="visually-hidden">О нас</h2>
         <section>
           <p>
             Мы — маленькая, но гордая <br />
@@ -110,24 +110,47 @@
         </section>
       </article>
       
-      <!-- Сотрудничество с нами  -->
+      <!-- Сотрудничество с компаниями  -->
       <section>
-        <h2>Сотрудничество с нами</h2>
+        <h2>Сотрудничество с компаниями</h2>
       </section>
+      <!-- /Сотрудничество с компаниями  -->
 
       <!-- Контакты и карта -->
       <section>
-        <h2>Контакты и карта</h2>
+        <h2 class="visually-hidden">Контакты и карта</h2>
       </section>
+      <!-- /Контакты и карта -->
+
+      <!-- Попап Напишите нам -->
+      <section>
+        <h2>Напишите нам</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label class="part-half">
+            Ваше имя:
+            <input type="text" name="fullname" placeholder="Имя Фамилия"/>
+          </label>
+          <label class="part-half">
+            Ваш e-mail:
+            <input type="email" name="email" placeholder="Почта" />
+          </label>
+          <label class="part-full">
+            Текст письма:
+            <textarea name="coment" rows="5"></textarea>
+          </label>
+          <button type="submit">Отправить</button>
+        </form>
+      </section>
+      <!-- /Попап Напишите нам -->
     </main>
     <!-- /Контент  -->
 
     <!-- Футер  -->
     <footer>
       <ul>
-        <li><a href="">Вконтакте</a></li>
-        <li><a href="">Facebook</a></li>
-        <li><a href="">Instagram</a></li>
+        <li><a href=""><span class="visually-hidden">Вконтакте</span></a></li>
+        <li><a href=""><span class="visually-hidden">Facebook</span></a></li>
+        <li><a href=""><span class="visually-hidden">Instagram</span></a></li>
       </ul>
       <p>
         Давайте дружить, это выгодно!
@@ -137,6 +160,5 @@
       </p>
     </footer>
     <!-- /Футер  -->
-
   </body>
 </html>

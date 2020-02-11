@@ -31,15 +31,72 @@
       
       <!-- Фильтры, сортировка проектов -->
       <section>
-        <h2>Фильтры проектов</h2>
-        <!-- форма -->
-        <form> 
-        <h3>Стоимость</h3>
-        <h3>Сетка</h3>
-        <h3>Особенности</h3>
-        <h3>Сортировать</h3>
+        <h2 class="visually-hidden">Фильтры проектов</h2>
+        
+        <form action="https://echo.htmlacademy.ru" method="get">
+        
+        <!-- форма часть 1 -->
+        <fieldset>
+          <legend>Стоимость</legend>
+          
+        </fieldset>
+        <!-- /форма часть 1 -->
+
+        <!-- форма часть 2 -->
+        <fieldset>
+          <legend>Сортировать</legend>
+
+        </fieldset>
+        <!-- /форма часть 2 -->
+
+        <!-- форма часть 3 -->
+          <fieldset>
+            <legend>Сетка</legend>
+            <ul>
+              <li>
+                <label for="grid-type-bootstrap">Адаптивная</label>
+                <input type="radio" name="grid-type" value="bootstrap" id="grid-type-bootstrap" checked>
+              </li>
+              <li>
+                <label for="grid-type-fixed">Фиксированная</label>
+                <input type="radio" name="grid-type" value="fixed" id="grid-type-fixed">
+              </li>
+              <li>
+                <label for="grid-type-fluid">Резиновая</label>
+                <input type="radio" name="grid-type" value="fluid" id="grid-type-fluid">
+              </li>
+            </ul>
+          </fieldset>
+          <!-- /форма часть 3 -->
+          <!-- форма часть 4 -->
+          <fieldset>
+            <legend>Особенности</legend>
+            <ul>
+              <li>
+                <label for="filter-slideshow">Слайдер</label>
+                <input type="checkbox" name="feature-slideshow" id="filter-slideshow" checked />
+              </li>
+              <li>
+                <label for="filter-block">Блок преимуществ</label>
+                <input type="checkbox" name="feature-block" id="filter-block" />
+              </li>
+              <li>
+                <label for="filter-news">Новости</label>
+                <input type="checkbox" name="feature-news" id="filter-news" checked />
+              </li>
+              <li>
+                <label for="filter-gallery">Галерея</label>
+                <input type="checkbox" name="feature-gallery" id="filter-gallery" />
+              </li>
+              <li>
+                <label for="filter-basket">Корзина</label>
+                <input type="checkbox" name="feature-basket" id="filter-basket" />
+              </li>
+            </ul>
+          </fieldset>
+          <!-- /форма часть 4 -->
+          <button type="submit">Показать</button>
         </form>
-        <!-- /форма -->
       </section>
 
       <section>
@@ -160,16 +217,37 @@
         <p>Номер страницы</p>
 
       </section>
+      <!-- /Пагинация, номер страницы -->
 
+      <!-- Попап Напишите нам -->
+      <section>
+        <h2>Напишите нам</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label class="part-half">
+            Ваше имя:
+            <input type="text" name="fullname" placeholder="Имя Фамилия"/>
+          </label>
+          <label class="part-half">
+            Ваш e-mail:
+            <input type="email" name="email" placeholder="Почта" />
+          </label>
+          <label class="part-full">
+            Текст письма:
+            <textarea name="coment" rows="5"></textarea>
+          </label>
+          <button type="submit">Отправить</button>
+        </form>
+      </section>
+      <!-- /Попап Напишите нам -->
     </main>
     <!-- /Контент  -->
 
     <!-- Футер  -->
     <footer>
       <ul>
-        <li><a href="">Вконтакте</a></li>
-        <li><a href="">Facebook</a></li>
-        <li><a href="">Instagram</a></li>
+        <li><a href=""><span class="visually-hidden">Вконтакте</span></a></li>
+        <li><a href=""><span class="visually-hidden">Facebook</span></a></li>
+        <li><a href=""><span class="visually-hidden">Instagram</span></a></li>
       </ul>
       <p>
         Давайте дружить, это выгодно!
