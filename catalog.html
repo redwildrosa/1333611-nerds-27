@@ -10,6 +10,7 @@
     <header>
       <nav>
         <a href="index.html">
+          <span class="visually-hidden">Главная</span>
           <img src="img/layout/icon-logo.svg" alt="Дизайн-студия Нёрдс" width="160" height="65" />
         </a>
         <ul>
@@ -32,12 +33,7 @@
       <!-- Фильтры, сортировка проектов -->
       <section>
         <h2 class="visually-hidden">Фильтры проектов</h2>
-        <!-- Секция сортировка -->
-        <section>
-          <h3>Сортировать:</h3>
-          <!-- тело сортировка -->
-        </section>
-        <!-- /Секция сортировка -->
+
         <!-- форма -->
         <form action="index.html" method="get">
           <fieldset>
@@ -93,6 +89,13 @@
 
       <section>
         <h2 class="visually-hidden">Список найденных проектов</h2>
+
+        <!-- Секция сортировка -->
+        <div>
+          <h3>Сортировать:</h3>
+
+        </div>
+        <!-- /Секция сортировка -->
 
         <ul>
           <!-- Карточка проекта 1-->
@@ -233,7 +236,6 @@
       </p>
     </footer>
     <!-- /Футер  -->
-
     <!-- Попап Напишите нам -->
     <section>
       <h2>Напишите нам</h2>
@@ -248,11 +250,11 @@
         </label>
         <label class="part-full">
           Текст письма:
-          <textarea name="comment"></textarea>
+          <textarea name="comment" placeholder="В свободной форме"></textarea>
         </label>
         <button type="submit">Отправить</button>
       </form>
-      <button type="button">Закрыть</button> <!-- декор icon-cross -->
+      <button type="button"><span class="visually-hidden">Закрыть</span></button> <!-- декор icon-cross -->
     </section>
     <!-- /Попап Напишите нам -->
   </body>

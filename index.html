@@ -9,8 +9,9 @@
     <!-- Хедер (только индекс) -->
     <header>
       <nav>
-        <a>
-          <img src="img/layout/icon-logo.svg" alt="Дизайн-студия Нёрдс" width="160" height="65" />
+        <a aria-label="Текущая страница">
+          <span class="visually-hidden">Главная</span>
+          <img src="img/layout/icon-logo.svg" alt="Логотип дизайн-студия Нёрдс" width="160" height="65" />
         </a>
         <ul>
           <li><a href="">Студия</a></li> <!-- О нас -->
@@ -27,7 +28,7 @@
     
     <!-- Контент  -->
     <main>
-      <h1>Дизайн-студия Нёрдс</h1>
+      <h1 class="visually-hidden">Дизайн-студия Нёрдс</h1 class="visually-hidden">
       
       <!-- Слайдер  -->
       <section>
@@ -105,7 +106,7 @@
             Исповедуем принципы минимализма и чистоты. Ставим математический расчет
   превыше креатива. Работаем не покладая рук, как роботы.
           </p>
-          <p>Выполняем заказы на разработку:</p>
+          <h4>Выполняем заказы на разработку:</h4>
           <ul>
             <li>Веб-сайтов любой сложности</li>
             <li>Мобильных приложений для iOS и Android</li>
@@ -113,12 +114,8 @@
           </ul>
         </div>
         <div>
-          <figure>
-            <img src="img/articles/img-nerds.png" alt="Логотип Нёрдс с графикой праздника">
-            <figcaption>
-              с 2004 года любим точность во всем:
-            </figcaption>
-          </figure>
+          <img src="img/articles/img-nerds.png" alt="Логотип Нёрдс с графикой праздника">
+          <h4>С 2004 года любим точность во всем:</h4> 
           <dl>
             <dt>146%</dt>
             <dd>Уровень самоотдачи</dd>
@@ -168,22 +165,22 @@
     <!-- Попап Напишите нам -->
     <section>
       <h2>Напишите нам</h2>
-      <form action="index.html" method="post">
+      <form action="catalog.html" method="post">
         <label class="part-half">
           Ваше имя:
           <input type="text" name="fullname" placeholder="Имя Фамилия"/>
         </label>
         <label class="part-half">
           Ваш e-mail:
-          <input type="email" name="email" placeholder="Почта" />
+          <input type="email" name="email" placeholder="mail@example.ru" />
         </label>
         <label class="part-full">
           Текст письма:
-          <textarea name="comment"></textarea>
+          <textarea name="comment" placeholder="В свободной форме"></textarea>
         </label>
         <button type="submit">Отправить</button>
       </form>
-      <button type="button">Закрыть</button> <!-- декор icon-cross -->
+      <button type="button"><span class="visually-hidden">Закрыть</span></button> <!-- декор icon-cross -->
     </section>
     <!-- /Попап Напишите нам -->
   </body>
