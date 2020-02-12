@@ -15,7 +15,7 @@
         <ul>
           <li><a href="">Студия</a></li> <!-- О нас -->
           <li><a href="">Клиенты</a></li> <!-- Портфолио -->
-          <li><a>Магазин</a></li>
+          <li><a aria-label="Текущая страница">Магазин</a></li> <!-- Текущая страница -->
           <li><a href="">Контакты</a></li>
         </ul>
         <ul>
@@ -32,75 +32,67 @@
       <!-- Фильтры, сортировка проектов -->
       <section>
         <h2 class="visually-hidden">Фильтры проектов</h2>
-        
-        <form action="https://echo.htmlacademy.ru" method="get">
-        
-        <!-- форма часть 1 -->
-        <fieldset>
-          <legend>Стоимость</legend>
-          
-        </fieldset>
-        <!-- /форма часть 1 -->
-
-        <!-- форма часть 2 -->
-        <fieldset>
-          <legend>Сортировать</legend>
-
-        </fieldset>
-        <!-- /форма часть 2 -->
-
-        <!-- форма часть 3 -->
+        <!-- Секция сортировка -->
+        <section>
+          <h3>Сортировать:</h3>
+          <!-- тело сортировка -->
+        </section>
+        <!-- /Секция сортировка -->
+        <!-- форма -->
+        <form action="index.html" method="get">
           <fieldset>
-            <legend>Сетка</legend>
+            <legend>Стоимость:</legend>
+            <!-- форма стоимость -->
+          </fieldset>
+          <fieldset>
+            <legend>Сетка:</legend>
             <ul>
               <li>
-                <label for="grid-type-bootstrap">Адаптивная</label>
                 <input type="radio" name="grid-type" value="bootstrap" id="grid-type-bootstrap" checked>
+                <label for="grid-type-bootstrap">Адаптивная</label>
               </li>
               <li>
-                <label for="grid-type-fixed">Фиксированная</label>
                 <input type="radio" name="grid-type" value="fixed" id="grid-type-fixed">
+                <label for="grid-type-fixed">Фиксированная</label>
               </li>
               <li>
-                <label for="grid-type-fluid">Резиновая</label>
                 <input type="radio" name="grid-type" value="fluid" id="grid-type-fluid">
+                <label for="grid-type-fluid">Резиновая</label>
               </li>
             </ul>
           </fieldset>
-          <!-- /форма часть 3 -->
-          <!-- форма часть 4 -->
           <fieldset>
-            <legend>Особенности</legend>
+            <legend>Особенности:</legend>
             <ul>
               <li>
-                <label for="filter-slideshow">Слайдер</label>
                 <input type="checkbox" name="feature-slideshow" id="filter-slideshow" checked />
+                <label for="filter-slideshow">Слайдер</label>
               </li>
               <li>
-                <label for="filter-block">Блок преимуществ</label>
                 <input type="checkbox" name="feature-block" id="filter-block" />
+                <label for="filter-block">Блок преимуществ</label>
               </li>
               <li>
-                <label for="filter-news">Новости</label>
                 <input type="checkbox" name="feature-news" id="filter-news" checked />
+                <label for="filter-news">Новости</label>
               </li>
               <li>
-                <label for="filter-gallery">Галерея</label>
                 <input type="checkbox" name="feature-gallery" id="filter-gallery" />
+                <label for="filter-gallery">Галерея</label>
               </li>
               <li>
-                <label for="filter-basket">Корзина</label>
                 <input type="checkbox" name="feature-basket" id="filter-basket" />
+                <label for="filter-basket">Корзина</label>
               </li>
             </ul>
           </fieldset>
-          <!-- /форма часть 4 -->
           <button type="submit">Показать</button>
         </form>
+        <!-- /форма -->
       </section>
 
       <section>
-        <h2>Список проектов</h2>
+        <h2 class="visually-hidden">Список найденных проектов</h2>
 
         <ul>
           <!-- Карточка проекта 1-->
@@ -118,7 +110,7 @@
                 Информационный сайт
                 для туристов
               </p>
-              <a href="">9 900 руб.</a>
+              <a href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
             </div>
           </li>
           <!-- /Карточка проекта 1-->
@@ -137,7 +129,7 @@
                 Информационный сайт
                 для досуга и отдыха
               </p>
-              <a href="">9 900 руб.</a>
+              <a href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
             </div>
           </li>
           <!-- /Карточка проекта 2-->
@@ -154,7 +146,7 @@
               <p>
                 Красота и здоровье для мужчин
               </p>
-              <a href="">9 900 руб.</a>
+              <a href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
             </div>
           </li>
           <!-- /Карточка проекта 3-->
@@ -171,7 +163,7 @@
               <p>
                 Товары для дома, вязанные игрушки и предметы
               </p>
-              <a href="">9 900 руб.</a>
+              <a href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
             </div>
           </li>
           <!-- /Карточка проекта 4-->
@@ -188,7 +180,7 @@
               <p>
                 Онлайн обучение. Учись чему то новому
               </p>
-              <a href="">9 900 руб.</a>
+              <a href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
             </div>
           </li>
           <!-- /Карточка проекта 5-->
@@ -205,7 +197,7 @@
               <p>
                 Русский квас по секретному древнему рецепту
               </p>
-              <a href="">9 900 руб.</a>
+              <a href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
             </div>
           </li>
           <!-- /Карточка проекта 6-->
@@ -219,36 +211,20 @@
       </section>
       <!-- /Пагинация, номер страницы -->
 
-      <!-- Попап Напишите нам -->
-      <section>
-        <h2>Напишите нам</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <label class="part-half">
-            Ваше имя:
-            <input type="text" name="fullname" placeholder="Имя Фамилия"/>
-          </label>
-          <label class="part-half">
-            Ваш e-mail:
-            <input type="email" name="email" placeholder="Почта" />
-          </label>
-          <label class="part-full">
-            Текст письма:
-            <textarea name="coment" rows="5"></textarea>
-          </label>
-          <button type="submit">Отправить</button>
-        </form>
-      </section>
-      <!-- /Попап Напишите нам -->
     </main>
     <!-- /Контент  -->
 
     <!-- Футер  -->
     <footer>
-      <ul>
-        <li><a href=""><span class="visually-hidden">Вконтакте</span></a></li>
-        <li><a href=""><span class="visually-hidden">Facebook</span></a></li>
-        <li><a href=""><span class="visually-hidden">Instagram</span></a></li>
-      </ul>
+      <div>
+        <p class="visually-hidden">Мы в соцсетях</p>
+
+        <ul>
+          <li><a href=""><span class="visually-hidden">Вконтакте</span></a></li>
+          <li><a href=""><span class="visually-hidden">Facebook</span></a></li>
+          <li><a href=""><span class="visually-hidden">Instagram</span></a></li>
+        </ul>
+      </div>
       <p>
         Давайте дружить, это выгодно!
       </p>
@@ -258,5 +234,26 @@
     </footer>
     <!-- /Футер  -->
 
+    <!-- Попап Напишите нам -->
+    <section>
+      <h2>Напишите нам</h2>
+      <form action="catalog.html" method="post">
+        <label class="part-half">
+          Ваше имя:
+          <input type="text" name="fullname" placeholder="Имя Фамилия"/>
+        </label>
+        <label class="part-half">
+          Ваш e-mail:
+          <input type="email" name="email" placeholder="mail@example.ru" />
+        </label>
+        <label class="part-full">
+          Текст письма:
+          <textarea name="comment"></textarea>
+        </label>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button> <!-- декор icon-cross -->
+    </section>
+    <!-- /Попап Напишите нам -->
   </body>
 </html>

@@ -70,7 +70,7 @@
             <p>
               Мир никогда не будет прежним после того как увидит ваш сайт!
             </p>
-            <button type="button">Заказать</button> <!-- ??? открывает попап Напишите нам -->
+            <a href="">Заказать</a> <!-- если работает JS открывает попап Напишите нам -->
           </li>
           <li>
             <h3>
@@ -79,7 +79,7 @@
             <p>
               Покорите топ-10 приложений в AppStore и Google Play
             </p>
-            <button type="button">Заказать</button> <!-- ??? открывает попап Напишите нам -->
+            <a href="">Заказать</a> <!-- если работает JS открывает попап Напишите нам -->
           </li>
           <li>
             <h3>
@@ -88,7 +88,7 @@
             <p>
               Вы даже не подозреваете, насколько вы изумительны!
             </p>
-            <button type="button">Заказать</button> <!-- ??? открывает попап Напишите нам -->
+            <a href="">Заказать</a> <!-- если работает JS открывает попап Напишите нам -->
           </li>
         </ul>
       </section>
@@ -96,23 +96,44 @@
       <!-- О нас - основная статья страницы -->
       <article>
         <h2 class="visually-hidden">О нас</h2>
-        <section>
+        <div>
           <p>
             Мы — маленькая, но гордая <br />
             дизайн-студия из Краснодара. 
           </p>
           <p>
-            Текст
+            Исповедуем принципы минимализма и чистоты. Ставим математический расчет
+  превыше креатива. Работаем не покладая рук, как роботы.
           </p>
-        </section>
-        <section>
-          <!-- Графика со статистикой компании -->
-        </section>
+          <p>Выполняем заказы на разработку:</p>
+          <ul>
+            <li>Веб-сайтов любой сложности</li>
+            <li>Мобильных приложений для iOS и Android</li>
+            <li>Слайдшоу и видео для корпоративных презентаций</li>
+          </ul>
+        </div>
+        <div>
+          <figure>
+            <img src="img/articles/img-nerds.png" alt="Логотип Нёрдс с графикой праздника">
+            <figcaption>
+              с 2004 года любим точность во всем:
+            </figcaption>
+          </figure>
+          <dl>
+            <dt>146%</dt>
+            <dd>Уровень самоотдачи</dd>
+            <dt>100%</dt>
+            <dd>Соблюдение сроков</dd>
+            <dt>50%</dt>
+            <dd>Минимальная предоплата</dd>
+          </dl>
+        </div>
       </article>
-      
+      <!-- /О нас - основная статья страницы -->
+
       <!-- Сотрудничество с компаниями  -->
       <section>
-        <h2>Сотрудничество с компаниями</h2>
+        <h2 class="visually-hidden">Сотрудничество с компаниями</h2>
       </section>
       <!-- /Сотрудничество с компаниями  -->
 
@@ -121,37 +142,20 @@
         <h2 class="visually-hidden">Контакты и карта</h2>
       </section>
       <!-- /Контакты и карта -->
-
-      <!-- Попап Напишите нам -->
-      <section>
-        <h2>Напишите нам</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <label class="part-half">
-            Ваше имя:
-            <input type="text" name="fullname" placeholder="Имя Фамилия"/>
-          </label>
-          <label class="part-half">
-            Ваш e-mail:
-            <input type="email" name="email" placeholder="Почта" />
-          </label>
-          <label class="part-full">
-            Текст письма:
-            <textarea name="coment" rows="5"></textarea>
-          </label>
-          <button type="submit">Отправить</button>
-        </form>
-      </section>
-      <!-- /Попап Напишите нам -->
     </main>
     <!-- /Контент  -->
 
     <!-- Футер  -->
     <footer>
-      <ul>
-        <li><a href=""><span class="visually-hidden">Вконтакте</span></a></li>
-        <li><a href=""><span class="visually-hidden">Facebook</span></a></li>
-        <li><a href=""><span class="visually-hidden">Instagram</span></a></li>
-      </ul>
+      <div>
+        <p class="visually-hidden">Мы в соцсетях</p>
+
+        <ul>
+          <li><a href=""><span class="visually-hidden">Вконтакте</span></a></li>
+          <li><a href=""><span class="visually-hidden">Facebook</span></a></li>
+          <li><a href=""><span class="visually-hidden">Instagram</span></a></li>
+        </ul>
+      </div>
       <p>
         Давайте дружить, это выгодно!
       </p>
@@ -160,5 +164,27 @@
       </p>
     </footer>
     <!-- /Футер  -->
+
+    <!-- Попап Напишите нам -->
+    <section>
+      <h2>Напишите нам</h2>
+      <form action="index.html" method="post">
+        <label class="part-half">
+          Ваше имя:
+          <input type="text" name="fullname" placeholder="Имя Фамилия"/>
+        </label>
+        <label class="part-half">
+          Ваш e-mail:
+          <input type="email" name="email" placeholder="Почта" />
+        </label>
+        <label class="part-full">
+          Текст письма:
+          <textarea name="comment"></textarea>
+        </label>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button> <!-- декор icon-cross -->
+    </section>
+    <!-- /Попап Напишите нам -->
   </body>
 </html>
