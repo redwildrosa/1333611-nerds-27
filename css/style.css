@@ -1,8 +1,9 @@
-/*
-body {
-  background: none;
-}
+/* обводка outline: 2px solid deeppink;  */
+/* примечания */
+/* .button наследование шрифта, тк этот тег по умолчанию использует свои */
+/* .button:hover, .button:focus, .button:active внимание на порядок псевдоклассов в правиле */
 
+/*
 .visually-hidden {
     position: absolute;
 
@@ -20,3 +21,426 @@ body {
   display: none;
 }
 */
+
+@font-face {
+   font-family: "Roboto";
+   font-style: normal;
+   font-weight: 400;
+   /* latin cyrillic Regular*/
+   src: local('Roboto'), local('Roboto-Regular'), url("../fonts/Roboto-Regular.ttf") format('truetype');
+}
+
+@font-face {
+   font-family: "Roboto";
+   font-style: normal;
+   font-weight: 500;
+   /* latin cyrillic Medium*/
+   src: local('Roboto Medium'), local('Roboto-Medium'), url("../fonts/Roboto-Medium.ttf") format('truetype');
+}
+
+@font-face {
+   font-family: "Roboto";
+   font-style: normal;
+   font-weight: 700;
+   /* latin cyrillic Bold*/
+   src: local('Roboto Bold'), local('Roboto-Bold'), url("../fonts/Roboto-Bold.ttf") format('truetype');
+}
+
+body {
+   color: #283136;
+   background-color: #ffffff;
+   font-family: "Roboto", "Times New Roman", sans-serif;
+   font-size: 16px;
+   font-weight: normal;
+   line-height: 24px;
+   margin: 0;
+   padding: 0;
+   text-align: left;
+}
+
+img {
+   max-width: 100%;
+}
+
+a {
+   text-decoration: none;
+}
+
+/* Стили состояний допол. ссылок заголовков и тестов */
+.add-link:hover,
+.add-link:focus {
+   color: #fb565a;
+}
+
+.add-link:active,
+.add-link:active {
+   color: rgba(0, 0, 0, 0.3);
+}
+
+/* кнопки по умолчанию серая */
+.button {
+   background-color: #eeeeee;
+   color: #000000;
+   border: none;
+   font: inherit;
+   font-weight: 500;
+   line-height: 18px;
+   text-align: center;
+   text-transform: uppercase;
+   vertical-align: middle;
+}
+
+.button:hover,
+.button:focus {
+   background-color: #dfdfdf;
+   color: #000000;
+}
+
+.button:active {
+   background-color: #d5d5d5;
+   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+   color: rgba(0, 0, 0, 0.3);
+}
+
+/* Красная кнопка */
+.button--red {
+   background-color: #fb565a;
+   color: #ffffff;
+}
+
+.button--red.button:hover,
+.button--red.button:focus {
+   background-color: #e74246;
+   color: #ffffff;
+}
+
+.button--red.button:active {
+   background-color: #d7373b;
+   color: rgba(255, 255, 255, 0.3);
+}
+
+/* Зеленая кнопка */
+.button--green {
+   background-color: #00ca74;
+   color: #ffffff;
+}
+
+.button--green.button:hover,
+.button--green.button:focus {
+   background-color: #00bc6c;
+   color: rgba(255, 255, 255, 0.3);
+}
+
+.button--green.button:active {
+   background-color: #00aa62;
+   color: rgba(255, 255, 255, 0.3);
+}
+
+/* Желтая кнопка */
+.button--yellow {
+   background-color: #efc84a;
+   color: #ffffff;
+}
+
+.button--yellow.button:hover,
+.button--yellow.button:focus {
+   background-color: #eab534;
+   color: #ffffff;
+}
+
+.button--yellow.button:active {
+   background-color: #e5a722;
+   color: rgba(255, 255, 255, 0.3);
+}
+
+/* круглые кнопки, социальные кнопки */
+.social-link {
+   background-color: #e1e1e1;
+   background-position: center;
+   background-repeat: no-repeat;
+   border-radius: 50%;
+   display: block;
+   height: 79px;
+   width: 79px;
+}
+
+.social-link:hover,
+.social-link:focus {
+   background-color: #e74246;
+}
+
+.social-link:active {
+   background-color: #d7373b;
+   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+}
+
+.social-link--vk {
+   background-image: url("../img/layout/icon-vk.svg");
+}
+
+.social-link--fb {
+   background-image: url("../img/layout/icon-fb.svg");
+}
+
+.social-link--insta {
+   background-image: url("../img/layout/icon-insta.svg");
+}
+
+.page-header {
+   background-color: #eeeeee;
+}
+
+.main-nav {
+   background-color: #eeeeee;
+   color: #000000;
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 24px;
+   text-transform: uppercase;
+}
+
+.main-nav-site,
+.main-nav-buy {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+/* Кнопки навигации */
+.main-nav-site a,
+.main-nav-buy a {
+   color: #000000;
+}
+
+.main-nav-site a:hover,
+.main-nav-site a:focus,
+.main-nav-buy a:hover,
+.main-nav-buy a:focus {
+   color: #fb565a;
+}
+
+.main-nav-site a:active,
+.main-nav-buy a:active {
+   color: rgba(0, 0, 0, 0.3);
+}
+
+.main-nav-site .current-link,
+.main-nav-buy .current-link,
+.main-nav-site .current-link:hover,
+.main-nav-buy .current-link:hover,
+.main-nav-site .current-link:active,
+.main-nav-buy .current-link:active {
+   color: #000000;
+}
+
+/* Название h1 */
+.page-title {
+   background-color: #eeeeee;
+   color: #000000;
+   font-size: 55px;
+   font-weight: 500;
+   line-height: 100%;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+}
+
+/* Блок слайдер */
+.main-slideshows {
+   background-color: #eeeeee;
+}
+
+/* Блок услуги */
+.main-servises {
+   background-color: #ffffff;
+}
+
+.main-servises-list {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.main-servises-item {
+   background-color: #ffffff;
+   color: #283136;
+   list-style: none;
+   text-align: left;
+}
+
+.main-servises-item h3 {
+   color: #000000;
+   font-size: 24px;
+   font-weight: bold;
+   line-height: 30px;
+   text-transform: uppercase;
+}
+
+.main-servises-item::before {
+   content: "";
+   background-position: center center;
+   background-repeat: no-repeat;
+   display: block;
+   height: 146px;
+}
+
+.main-servises-item--sites::before {
+   background-color: #fb565a;
+   background-image: url("../img/services/icon-sites.png");
+}
+
+.main-servises-item--apps::before {
+   background-color: #00ca74;
+   background-image: url("../img/services/icon-apps.png");
+}
+
+.main-servises-item--presentations::before {
+   background-color: #efc849;
+   background-image: url("../img/services/icon-presentations.png");
+
+}
+
+/* Основная статья */
+
+.main-article-slogan {
+   color: #000000;
+   font-size: 45px;
+   font-weight: 500;
+   line-height: 100%;
+   text-align: left;
+}
+
+.main-article h4 {
+   color: #000000;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+.main-article dt {
+   color: #000000;
+   font-size: 45px;
+   font-weight: bold;
+   line-height: 100%;
+   text-align: left;
+   text-transform: uppercase;
+}
+
+.main-article dd {
+   line-height: 100%;
+}
+
+/* подвал сайта */
+.page-footer {
+   background-color: #ffffff;
+}
+
+.social-links-list {
+   color: yellowgreen;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.footer-slogan {
+   font-size: 36px;
+   font-weight: bold;
+   line-height: 100%;
+   text-align: left;
+   color: #000000;
+}
+
+/* Фильтры форма */
+.filters fieldset {
+   border: none;
+}
+
+.filters-part legend {
+   font-size: 18px;
+   font-weight: bold;
+   line-height: 30px;
+   text-align: left;
+   color: #000000;
+}
+
+.filters-list {
+   list-style: none;
+   line-height: 20px;
+   margin: 0;
+   padding: 0;
+}
+
+.filters-input:hover+label,
+.filters-input:focus+label {
+   color: red;
+}
+
+.filter-input:disabled+label {
+   color: #4d4d4d;
+   opacity: 0.3;
+}
+
+/* карточка товара */
+.catalog-list {
+   background-color: #ffffff;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.catalog-item {
+   background-color: #ffffff;
+   border: solid 1px rgba(0, 0, 0, 0.1);
+   border-radius: 4px 4px 0 0;
+   box-sizing: border-box;
+   width: 360px;
+   margin: 0;
+   padding: 0;
+}
+
+.catalog-item::before {
+   content: "";
+   /* Смещение на толщину рамки */
+   position: relative; left: -1px; top: 0px;
+   background-position: top left;
+   background-repeat: no-repeat;
+   background-color: #ffffff;
+   background-image: url("../img/layout/icon-browser.svg");
+   display: block;
+   height: 40px;
+   opacity: 0.1;
+   width: 360px;
+}
+
+.catalog-item:hover {
+   border: solid 1px rgba(77, 77, 77, 0.1);
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.catalog-item:hover::before {
+   opacity: 1;
+}
+
+/* блок с информацией о товаре */
+.catalog-item-info {
+   background-color: #eeeeee;
+   display: block;
+   height: 231px;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+   width: 100%;
+}
+
+.catalog-item-info h3 {
+   color: #000000;
+   font-size: 18px;
+   font-weight: bold;
+   line-height: 30px;
+   margin: 0;
+   padding: 0;
+   text-transform: uppercase;
+}
+
+.catalog-item-image img {
+   vertical-align: middle;
+}

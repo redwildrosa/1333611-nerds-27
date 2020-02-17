@@ -1,261 +1,271 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Магазин готовых шаблонов. Нёрдс</title>
-  </head>
-  <body>
 
-    <!-- Хедер (кроме индекс) -->
-    <header>
-      <nav>
-        <a href="index.html">
-          <span class="visually-hidden">Главная</span>
-          <img src="img/layout/icon-logo.svg" alt="Дизайн-студия Нёрдс" width="160" height="65" />
-        </a>
-        <ul>
-          <li><a href="">Студия</a></li> <!-- О нас -->
-          <li><a href="">Клиенты</a></li> <!-- Портфолио -->
-          <li><a aria-label="Текущая страница">Магазин</a></li> <!-- Текущая страница -->
-          <li><a href="">Контакты</a></li>
-        </ul>
-        <ul>
-          <li><a href="">Корзина</a></li>
-        </ul>
+<head>
+   <meta charset="utf-8">
+   <title>Магазин готовых шаблонов. Нёрдс</title>
+   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic"
+      rel="stylesheet">
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+   <!-- Хедер (кроме индекс) -->
+   <header class="page-header">
+      <nav class="main-nav">
+         <a class="main-nav__logo" href="index.html" aria-label="Главная страница">
+            <img src="img/layout/icon-logo.svg" alt="Логотип дизайн-студия Нёрдс" width="160" height="65" />
+         </a>
+         <ul class="main-nav-site">
+            <li><a href="">Студия</a></li> <!-- О нас -->
+            <li><a href="">Клиенты</a></li> <!-- Портфолио -->
+            <li><a class="current-link" aria-label="Текущая страница">Магазин</a></li> <!-- Текущая страница -->
+            <li><a href="">Контакты</a></li>
+         </ul>
+         <ul class="main-nav-buy">
+            <li><a href="">Корзина</a></li>
+         </ul>
       </nav>
-    </header>
-    <!-- /Хедер  -->
+   </header>
+   <!-- /Хедер  -->
 
-    <!-- Контент  -->
-    <main>
-      <h1>Магазин готовых шаблонов</h1>
-      
+   <!-- Контент  -->
+   <main class="page-content">
+      <h1 class="page-title">Магазин готовых шаблонов</h1>
+
       <!-- Фильтры, сортировка проектов -->
-      <section>
-        <h2 class="visually-hidden">Фильтры проектов</h2>
+      <section class="filters">
+         <h2 class="visually-hidden">Фильтры проектов</h2>
 
-        <!-- форма -->
-        <form action="index.html" method="get">
-          <fieldset>
-            <legend>Стоимость:</legend>
-            <!-- форма стоимость -->
-          </fieldset>
-          <fieldset>
-            <legend>Сетка:</legend>
-            <ul>
-              <li>
-                <input type="radio" name="grid-type" value="bootstrap" id="grid-type-bootstrap" checked>
-                <label for="grid-type-bootstrap">Адаптивная</label>
-              </li>
-              <li>
-                <input type="radio" name="grid-type" value="fixed" id="grid-type-fixed">
-                <label for="grid-type-fixed">Фиксированная</label>
-              </li>
-              <li>
-                <input type="radio" name="grid-type" value="fluid" id="grid-type-fluid">
-                <label for="grid-type-fluid">Резиновая</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset>
-            <legend>Особенности:</legend>
-            <ul>
-              <li>
-                <input type="checkbox" name="feature-slideshow" id="filter-slideshow" checked />
-                <label for="filter-slideshow">Слайдер</label>
-              </li>
-              <li>
-                <input type="checkbox" name="feature-block" id="filter-block" />
-                <label for="filter-block">Блок преимуществ</label>
-              </li>
-              <li>
-                <input type="checkbox" name="feature-news" id="filter-news" checked />
-                <label for="filter-news">Новости</label>
-              </li>
-              <li>
-                <input type="checkbox" name="feature-gallery" id="filter-gallery" />
-                <label for="filter-gallery">Галерея</label>
-              </li>
-              <li>
-                <input type="checkbox" name="feature-basket" id="filter-basket" />
-                <label for="filter-basket">Корзина</label>
-              </li>
-            </ul>
-          </fieldset>
-          <button type="submit">Показать</button>
-        </form>
-        <!-- /форма -->
+         <!-- форма -->
+         <form class="filters-form" action="catalog.html" method="get">
+            <fieldset class="filters-part">
+               <legend>Стоимость:</legend>
+               <!-- форма стоимость -->
+            </fieldset>
+            <fieldset class="filters-part">
+               <legend>Сетка:</legend>
+               <ul class="filters-list">
+                  <li>
+                     <input class="visually-hidden filters-input filters-input--radio" type="radio" name="grid-type" value="bootstrap" id="grid-type-bootstrap" checked>
+                     <label for="grid-type-bootstrap">Адаптивная</label>
+                  </li>
+                  <li>
+                     <input class="visually-hidden filters-input filters-input--radio" type="radio" name="grid-type" value="fixed" id="grid-type-fixed">
+                     <label for="grid-type-fixed">Фиксированная</label>
+                  </li>
+                  <li>
+                     <input class="visually-hidden filters-input filters-input--radio" type="radio" name="grid-type" value="fluid" id="grid-type-fluid">
+                     <label for="grid-type-fluid">Резиновая</label>
+                  </li>
+               </ul>
+            </fieldset>
+            <fieldset class="filters-part">
+               <legend>Особенности:</legend>
+               <ul class="filters-list">
+                  <li>
+                     <input class="visually-hidden filters-input filters-input--checkbox" type="checkbox" name="feature-slideshow" id="filter-slideshow" checked />
+                     <label for="filter-slideshow">Слайдер</label>
+                  </li>
+                  <li>
+                     <input class="visually-hidden filters-input filters-input--checkbox" type="checkbox" name="feature-block" id="filter-block" />
+                     <label for="filter-block">Блок преимуществ</label>
+                  </li>
+                  <li>
+                     <input class="visually-hidden filters-input filters-input--checkbox" type="checkbox" name="feature-news" id="filter-news" checked />
+                     <label for="filter-news">Новости</label>
+                  </li>
+                  <li>
+                     <input class="visually-hidden filters-input filters-input--checkbox" type="checkbox" name="feature-gallery" id="filter-gallery"  disabled />
+                     <label for="filter-gallery">Галерея</label>
+                  </li>
+                  <li>
+                     <input class="visually-hidden filters-input filters-input--checkbox" type="checkbox" name="feature-basket" id="filter-basket" />
+                     <label for="filter-basket">Корзина</label>
+                  </li>
+               </ul>
+            </fieldset>
+            <button class="button filters-button" type="submit">Показать</button>
+         </form>
+         <!-- /форма -->
       </section>
 
-      <section>
-        <h2 class="visually-hidden">Список найденных проектов</h2>
+      <section class="catalog">
+         <h2 class="visually-hidden">Список найденных проектов</h2>
 
-        <!-- Секция сортировка -->
-        <div>
-          <h3>Сортировать:</h3>
+         <!-- Секция сортировка -->
+         <div class="sorting">
+            <h3>Сортировать:</h3>
 
-        </div>
-        <!-- /Секция сортировка -->
+         </div>
+         <!-- /Секция сортировка -->
 
-        <ul>
-          <!-- Карточка проекта 1-->
-          <li>
-            <div>
-              <!-- Изображение с 3 точками в css -->
-              <img src="img/projects/img-sedona.jpg" alt="Sedona Информационный сайт 
+         <ul class="catalog-list">
+            <!-- Карточка проекта 1-->
+            <li class="catalog-item">
+               <div class="catalog-item-image">
+                  <!-- Изображение с 3 точками в css -->
+                  <img src="img/projects/img-sedona.jpg" alt="Sedona Информационный сайт
               для туристов" width="360" height="576" />
-            </div>
-            <div>
-              <h3>
-                <a href="">Sedona</a>
-              </h3>
-              <p>
-                Информационный сайт
-                для туристов
-              </p>
-              <a href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
-            </div>
-          </li>
-          <!-- /Карточка проекта 1-->
-          <!-- Карточка проекта 2-->
-          <li>
-            <div>
-              <!-- Изображение с 3 точками в css -->
-              <img src="img/projects/img-pink.jpg" alt="Pink Информационный сайт
+               </div>
+               <div class="catalog-item-info">
+                  <h3>
+                     <a class="add-link" href="">Sedona</a>
+                  </h3>
+                  <p>
+                     Информационный сайт
+                     для туристов
+                  </p>
+                  <a class="button button--red" href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
+               </div>
+            </li>
+            <!-- /Карточка проекта 1-->
+            <!-- Карточка проекта 2-->
+            <li class="catalog-item">
+               <div class="catalog-item-image">
+                  <!-- Изображение с 3 точками в css -->
+                  <img src="img/projects/img-pink.jpg" alt="Pink Информационный сайт
               для досуга и отдыха" width="360" height="576" />
-            </div>
-            <div>
-              <h3>
-                <a href="">Pink</a>
-              </h3>
-              <p>
-                Информационный сайт
-                для досуга и отдыха
-              </p>
-              <a href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
-            </div>
-          </li>
-          <!-- /Карточка проекта 2-->
-          <!-- Карточка проекта 3-->
-          <li>
-            <div>
-              <!-- Изображение с 3 точками в css -->
-              <img src="img/projects/img-barbershop.jpg" alt="Barbershop Красота и здоровье для мужчин" width="360" height="576" />
-            </div>
-            <div>
-              <h3>
-                <a href="">Barbershop</a>
-              </h3>
-              <p>
-                Красота и здоровье для мужчин
-              </p>
-              <a href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
-            </div>
-          </li>
-          <!-- /Карточка проекта 3-->
-          <!-- Карточка проекта 4-->
-          <li>
-            <div>
-              <!-- Изображение с 3 точками в css -->
-              <img src="img/projects/img-mishka.jpg" alt="Mishka Товары для дома, вязанные игрушки и предметы" width="360" height="576" />
-            </div>
-            <div>
-              <h3>
-                <a href="">Mishka</a>
-              </h3>
-              <p>
-                Товары для дома, вязанные игрушки и предметы
-              </p>
-              <a href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
-            </div>
-          </li>
-          <!-- /Карточка проекта 4-->
-          <!-- Карточка проекта 5-->
-          <li>
-            <div>
-              <!-- Изображение с 3 точками в css -->
-              <img src="img/projects/img-aplus.jpg" alt="Aplus Онлайн обучение. Учись чему то новому" width="360" height="576" />
-            </div>
-            <div>
-              <h3>
-                <a href="">Aplus</a>
-              </h3>
-              <p>
-                Онлайн обучение. Учись чему то новому
-              </p>
-              <a href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
-            </div>
-          </li>
-          <!-- /Карточка проекта 5-->
-          <!-- Карточка проекта 6-->
-          <li>
-            <div>
-              <!-- Изображение с 3 точками в css -->
-              <img src="img/projects/img-kvast.jpg" alt="Kvast Русский квас по секретному древнему рецепту" width="360" height="576" />
-            </div>
-            <div>
-              <h3>
-                <a href="">Kvast</a>
-              </h3>
-              <p>
-                Русский квас по секретному древнему рецепту
-              </p>
-              <a href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
-            </div>
-          </li>
-          <!-- /Карточка проекта 6-->
-        </ul>
+               </div>
+               <div class="catalog-item-info">
+                  <h3>
+                     <a class="add-link" href="">Pink</a>
+                  </h3>
+                  <p>
+                     Информационный сайт
+                     для досуга и отдыха
+                  </p>
+                  <a class="button button--red" href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
+               </div>
+            </li>
+            <!-- /Карточка проекта 2-->
+            <!-- Карточка проекта 3-->
+            <li class="catalog-item">
+               <div class="catalog-item-image">
+                  <!-- Изображение с 3 точками в css -->
+                  <img src="img/projects/img-barbershop.jpg" alt="Barbershop Красота и здоровье для мужчин" width="360"
+                     height="576" />
+               </div>
+               <div class="catalog-item-info">
+                  <h3>
+                     <a class="add-link" href="">Barbershop</a>
+                  </h3>
+                  <p>
+                     Красота и здоровье для мужчин
+                  </p>
+                  <a class="button button--red" href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
+               </div>
+            </li>
+            <!-- /Карточка проекта 3-->
+            <!-- Карточка проекта 4-->
+            <li class="catalog-item">
+               <div class="catalog-item-image">
+                  <!-- Изображение с 3 точками в css -->
+                  <img src="img/projects/img-mishka.jpg" alt="Mishka Товары для дома, вязанные игрушки и предметы"
+                     width="360" height="576" />
+               </div>
+               <div class="catalog-item-info">
+                  <h3>
+                     <a class="add-link" href="">Mishka</a>
+                  </h3>
+                  <p>
+                     Товары для дома, вязанные игрушки и предметы
+                  </p>
+                  <a class="button button--red" href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
+               </div>
+            </li>
+            <!-- /Карточка проекта 4-->
+            <!-- Карточка проекта 5-->
+            <li class="catalog-item">
+               <div class="catalog-item-image">
+                  <!-- Изображение с 3 точками в css -->
+                  <img src="img/projects/img-aplus.jpg" alt="Aplus Онлайн обучение. Учись чему то новому" width="360"
+                     height="576" />
+               </div>
+               <div class="catalog-item-info">
+                  <h3>
+                     <a class="add-link" href="">Aplus</a>
+                  </h3>
+                  <p>
+                     Онлайн обучение. Учись чему то новому
+                  </p>
+                  <a class="button button--red" href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
+               </div>
+            </li>
+            <!-- /Карточка проекта 5-->
+            <!-- Карточка проекта 6-->
+            <li class="catalog-item">
+               <div class="catalog-item-image">
+                  <!-- Изображение с 3 точками в css -->
+                  <img src="img/projects/img-kvast.jpg" alt="Kvast Русский квас по секретному древнему рецепту"
+                     width="360" height="576" />
+               </div>
+               <div class="catalog-item-info">
+                  <h3>
+                     <a class="add-link" href="">Kvast</a>
+                  </h3>
+                  <p>
+                     Русский квас по секретному древнему рецепту
+                  </p>
+                  <a class="button button--red" href="" aria-label="Купить за">9 900 руб.</a> <!-- ссылка на стр корзина -->
+               </div>
+            </li>
+            <!-- /Карточка проекта 6-->
+         </ul>
       </section>
 
       <!-- Пагинация, номер страницы -->
       <section>
-        <p>Номер страницы</p>
+         <p>Номер страницы</p>
 
       </section>
       <!-- /Пагинация, номер страницы -->
 
-    </main>
-    <!-- /Контент  -->
+   </main>
+   <!-- /Контент  -->
 
-    <!-- Футер  -->
-    <footer>
-      <div>
-        <p class="visually-hidden">Мы в соцсетях</p>
+   <!-- Футер  -->
+   <footer class="page-footer" id="footer">
+      <div class="social-links">
+         <p class="visually-hidden">Мы в соцсетях</p>
 
-        <ul>
-          <li><a href=""><span class="visually-hidden">Вконтакте</span></a></li>
-          <li><a href=""><span class="visually-hidden">Facebook</span></a></li>
-          <li><a href=""><span class="visually-hidden">Instagram</span></a></li>
-        </ul>
+         <ul class="social-links-list">
+            <li><a class="social-link social-link--vk" href="">Вконтакте</a></li>
+            <li><a class="social-link  social-link--fb" href=""><span class="visually-hidden">Facebook</span></a></li>
+            <li><a class="social-link  social-link--insta" href=""><span class="visually-hidden">Instagram</span></a></li>
+         </ul>
       </div>
-      <p>
-        Давайте дружить, это выгодно!
+      <p class="footer-slogan">
+         Давайте дружить, это выгодно!
       </p>
-      <p>
-        Скидка 10% для друзей из социальных сетей.
+      <p class="footer-action">
+         Скидка 10% для друзей из социальных сетей.
       </p>
-    </footer>
-    <!-- /Футер  -->
-    <!-- Попап Напишите нам -->
-    <section>
+   </footer>
+   <!-- /Футер  -->
+   <!-- Попап Напишите нам -->
+   <section>
       <h2>Напишите нам</h2>
       <form action="catalog.html" method="post">
-        <label class="part-half">
-          Ваше имя:
-          <input type="text" name="fullname" placeholder="Имя Фамилия"/>
-        </label>
-        <label class="part-half">
-          Ваш e-mail:
-          <input type="email" name="email" placeholder="mail@example.ru" />
-        </label>
-        <label class="part-full">
-          Текст письма:
-          <textarea name="comment" placeholder="В свободной форме"></textarea>
-        </label>
-        <button type="submit">Отправить</button>
+         <label class="part-half">
+            Ваше имя:
+            <input type="text" name="fullname" placeholder="Имя Фамилия" />
+         </label>
+         <label class="part-half">
+            Ваш e-mail:
+            <input type="email" name="email" placeholder="mail@example.ru" />
+         </label>
+         <label class="part-full">
+            Текст письма:
+            <textarea name="comment" placeholder="В свободной форме"></textarea>
+         </label>
+         <button type="submit">Отправить</button>
       </form>
       <button type="button"><span class="visually-hidden">Закрыть</span></button> <!-- декор icon-cross -->
-    </section>
-    <!-- /Попап Напишите нам -->
-  </body>
+   </section>
+   <!-- /Попап Напишите нам -->
+</body>
+
 </html>
