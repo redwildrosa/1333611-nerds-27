@@ -22,34 +22,10 @@
 }
 */
 
-@font-face {
-   font-family: "Roboto";
-   font-style: normal;
-   font-weight: 400;
-   /* latin cyrillic Regular*/
-   src: local('Roboto'), local('Roboto-Regular'), url("../fonts/Roboto-Regular.ttf") format('truetype');
-}
-
-@font-face {
-   font-family: "Roboto";
-   font-style: normal;
-   font-weight: 500;
-   /* latin cyrillic Medium*/
-   src: local('Roboto Medium'), local('Roboto-Medium'), url("../fonts/Roboto-Medium.ttf") format('truetype');
-}
-
-@font-face {
-   font-family: "Roboto";
-   font-style: normal;
-   font-weight: 700;
-   /* latin cyrillic Bold*/
-   src: local('Roboto Bold'), local('Roboto-Bold'), url("../fonts/Roboto-Bold.ttf") format('truetype');
-}
-
 body {
    color: #283136;
    background-color: #ffffff;
-   font-family: "Roboto", "Times New Roman", sans-serif;
+   font-family: "Roboto", "Arial", sans-serif;
    font-size: 16px;
    font-weight: normal;
    line-height: 24px;
@@ -67,12 +43,15 @@ a {
 }
 
 /* Стили состояний допол. ссылок заголовков и тестов */
+.add-link {
+   color: inherit;
+}
+
 .add-link:hover,
 .add-link:focus {
    color: #fb565a;
 }
 
-.add-link:active,
 .add-link:active {
    color: rgba(0, 0, 0, 0.3);
 }
@@ -108,13 +87,12 @@ a {
    color: #ffffff;
 }
 
-.button--red.button:hover,
-.button--red.button:focus {
+.button--red:hover,
+.button--red:focus {
    background-color: #e74246;
-   color: #ffffff;
 }
 
-.button--red.button:active {
+.button--red:active {
    background-color: #d7373b;
    color: rgba(255, 255, 255, 0.3);
 }
@@ -125,13 +103,12 @@ a {
    color: #ffffff;
 }
 
-.button--green.button:hover,
-.button--green.button:focus {
+.button--green:hover,
+.button--green:focus {
    background-color: #00bc6c;
-   color: rgba(255, 255, 255, 0.3);
 }
 
-.button--green.button:active {
+.button--green:active {
    background-color: #00aa62;
    color: rgba(255, 255, 255, 0.3);
 }
@@ -142,13 +119,13 @@ a {
    color: #ffffff;
 }
 
-.button--yellow.button:hover,
-.button--yellow.button:focus {
+.button--yellow:hover,
+.button--yellow:focus {
    background-color: #eab534;
    color: #ffffff;
 }
 
-.button--yellow.button:active {
+.button--yellow:active {
    background-color: #e5a722;
    color: rgba(255, 255, 255, 0.3);
 }
@@ -391,7 +368,7 @@ a {
    background-color: #ffffff;
    border: solid 1px rgba(0, 0, 0, 0.1);
    border-radius: 4px 4px 0 0;
-   box-sizing: border-box;
+   /* box-sizing: border-box; */
    width: 360px;
    margin: 0;
    padding: 0;
@@ -400,7 +377,7 @@ a {
 .catalog-item::before {
    content: "";
    /* Смещение на толщину рамки */
-   position: relative; left: -1px; top: 0px;
+   position: relative;
    background-position: top left;
    background-repeat: no-repeat;
    background-color: #ffffff;
@@ -423,10 +400,7 @@ a {
 /* блок с информацией о товаре */
 .catalog-item-info {
    background-color: #eeeeee;
-   display: block;
    height: 231px;
-   margin: 0;
-   padding: 0;
    text-align: center;
    width: 100%;
 }
