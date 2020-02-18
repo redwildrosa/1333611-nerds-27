@@ -122,7 +122,6 @@ a {
 .button--yellow:hover,
 .button--yellow:focus {
   background-color: #eab534;
-  color: #ffffff;
 }
 
 .button--yellow:active {
@@ -228,10 +227,6 @@ a {
 }
 
 /* Блок услуги */
-.main-servises {
-  background-color: #ffffff;
-}
-
 .main-servises-list {
   list-style: none;
   margin: 0;
@@ -242,7 +237,6 @@ a {
   background-color: #ffffff;
   color: #283136;
   list-style: none;
-  text-align: left;
 }
 
 .main-servises-item h3 {
@@ -278,13 +272,11 @@ a {
 }
 
 /* Основная статья */
-
 .main-article-slogan {
   color: #000000;
   font-size: 45px;
   font-weight: 500;
   line-height: 100%;
-  text-align: left;
 }
 
 .main-article h4 {
@@ -298,7 +290,6 @@ a {
   font-size: 45px;
   font-weight: bold;
   line-height: 100%;
-  text-align: left;
   text-transform: uppercase;
 }
 
@@ -306,13 +297,13 @@ a {
   line-height: 100%;
 }
 
-/* подвал сайта */
-.page-footer {
-  background-color: #ffffff;
+.sup {
+  font-size: 24px;
+  vertical-align: super;
 }
 
+/* подвал сайта */
 .social-links-list {
-  color: yellowgreen;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -322,7 +313,6 @@ a {
   font-size: 36px;
   font-weight: bold;
   line-height: 100%;
-  text-align: left;
   color: #000000;
 }
 
@@ -335,7 +325,6 @@ a {
   font-size: 18px;
   font-weight: bold;
   line-height: 30px;
-  text-align: left;
   color: #000000;
 }
 
@@ -346,19 +335,12 @@ a {
   padding: 0;
 }
 
-.filters-input:hover+label,
-.filters-input:focus+label {
-  color: red;
-}
-
-.filter-input:disabled+label {
-  color: #4d4d4d;
-  opacity: 0.3;
+.filters-input:disabled+label {
+  color: rgba(40, 49, 54, 0.3);
 }
 
 /* карточка товара */
 .catalog-list {
-  background-color: #ffffff;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -378,7 +360,6 @@ a {
   position: relative;
   background-position: top left;
   background-repeat: no-repeat;
-  background-color: #ffffff;
   background-image: url("../img/layout/icon-browser.svg");
   display: block;
   height: 40px;
