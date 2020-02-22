@@ -28,7 +28,7 @@ body {
   min-width: 1160px;
 
   /* временно фон-дизайн */
-  /* background: url("../img/nerds-catalog-30.png") no-repeat center top;
+  /* background: url("../img/nerds-index-15.png") no-repeat center top;
   background-size: 1440px; */
 }
 
@@ -444,15 +444,16 @@ padding: 0;
 }
 
 .main-map {
-  display: table;
-  overflow: hidden;
   min-height: 416px;
   position: relative;
 }
 
 .main-map img {
+  position: absolute; left: 50%; top: 50%;
   display: block; /* Удаляем отступы картинки от высоты строки */
-  margin: 0 auto;
+  height: 416px;
+  margin-top: -208px;
+  margin-left: -720px;
   width: 1440px;
 }
 
