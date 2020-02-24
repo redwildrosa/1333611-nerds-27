@@ -42,7 +42,7 @@
 
         <!-- форма -->
         <form class="filters-form" action="catalog.html" method="get">
-          <fieldset class="filters-part filters-buy">
+          <fieldset class="filters-part filters-part--buy">
             <legend>Стоимость:</legend>
             <!-- форма стоимость -->
           </fieldset>
@@ -50,7 +50,7 @@
             <legend>Сетка:</legend>
             <ul class="filters-list">
               <li>
-                <input style="padding: 10px;" class="visually-hidden filters-input filters-input--radio" type="radio"
+                <input  class="visually-hidden filters-input filters-input--radio" type="radio"
                   name="grid-type" value="bootstrap" id="grid-type-bootstrap" checked>
                 <label for="grid-type-bootstrap">Адаптивная</label>
               </li>
@@ -66,7 +66,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filters-part">
+          <fieldset class="filters-part filters-part--features">
             <legend>Особенности:</legend>
             <ul class="filters-list">
               <li>
@@ -119,6 +119,7 @@
               <!-- Изображение с 3 точками в css -->
               <img src="img/projects/img-sedona.jpg" alt="Sedona Информационный сайт
               для туристов" width="360" height="576" />
+              переполнение не отображается overflow: hidden
             </div>
             <div class="catalog-item-info">
               <h3>
@@ -226,19 +227,27 @@
         </ul>
         <!-- Пагинация, номер страницы -->
           <ul class="pagination-list" aria-label="Номер страницы">
-            <li class="pagination-item pagination-item--current" aria-label="Текущая страница"><a>1</a></li>
-            <li class="pagination-item"><a href="">2</a></li>
-            <li class="pagination-item"><a href="">3</a></li>
-            <li class="pagination-item pagination-item--word"><a href="">Следующая</a></li>
+            <li class="pagination-item pagination-item--current" aria-label="Текущая страница">
+              <a class="button">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="button" href="">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="button" href="">3</a>
+            </li>
+            <li class="pagination-item">
+              <a class="button " href="">Следующая</a>
+            </li>
           </ul>
         <!-- /Пагинация, номер страницы -->
       </section>
     </div>
 
     <!-- Контакты и карта -->
-    <section class="main-map central">
+    <section class="main-map">
       <h2 class="visually-hidden">Контакты и карта</h2>
-      <img src="../img/layout/img-map.jpg" alt="Карта с адресом Нёрдс" width="1440" height="416" />
+      <img src="img/layout/img-map.png" alt="карта с адресом Нёрдс" width="1440" height="416" />
     </section>
     <!-- /Контакты и карта -->
   </main>
