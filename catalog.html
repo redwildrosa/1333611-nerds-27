@@ -19,13 +19,20 @@
         <img src="img/layout/icon-logo.svg" alt="Логотип дизайн-студия Нёрдс" width="160" height="65" />
       </a>
       <ul class="main-nav-site">
-        <li><a href="">Студия</a></li> <!-- О нас -->
-        <li><a href="">Клиенты</a></li> <!-- Портфолио -->
-        <li><a class="current-link" aria-label="Текущая страница">Магазин</a></li> <!-- Текущая страница -->
-        <li><a href="">Контакты</a></li>
+        <li>
+          <a class="main-nav-link" href="">Студия</a>
+        </li> <!-- О нас -->
+        <li>
+          <a class="main-nav-link" href="">Клиенты</a>
+        </li> <!-- Портфолио -->
+        <li>
+          <a class="main-nav-link main-nav-link--current" aria-label="Текущая страница">Магазин</a>
+        </li> <!-- Текущая страница -->
+        <li>
+          <a class="main-nav-link" href="">Контакты</a></li>
       </ul>
       <ul class="main-nav-buy">
-        <li><a href="">Корзина</a></li>
+        <li><a class="main-nav-link main-nav-link--basket" href="">Корзина</a></li>
       </ul>
     </nav>
   </header>
@@ -50,8 +57,8 @@
             <legend>Сетка:</legend>
             <ul class="filters-list">
               <li>
-                <input  class="visually-hidden filters-input filters-input--radio" type="radio"
-                  name="grid-type" value="bootstrap" id="grid-type-bootstrap" checked>
+                <input class="visually-hidden filters-input filters-input--radio" type="radio" name="grid-type"
+                  value="bootstrap" id="grid-type-bootstrap" checked>
                 <label for="grid-type-bootstrap">Адаптивная</label>
               </li>
               <li>
@@ -96,7 +103,7 @@
               </li>
             </ul>
           </fieldset>
-          <button class="button filters-button" type="submit">Показать</button>
+          <button class="button button--filters" type="submit">Показать</button>
         </form>
         <!-- /форма -->
       </section>
@@ -116,10 +123,8 @@
           <!-- Карточка проекта 1-->
           <li class="catalog-item">
             <div class="catalog-item-image">
-              <!-- Изображение с 3 точками в css -->
               <img src="img/projects/img-sedona.jpg" alt="Sedona Информационный сайт
               для туристов" width="360" height="576" />
-              переполнение не отображается overflow: hidden
             </div>
             <div class="catalog-item-info">
               <h3>
@@ -136,7 +141,6 @@
           <!-- Карточка проекта 2-->
           <li class="catalog-item">
             <div class="catalog-item-image">
-              <!-- Изображение с 3 точками в css -->
               <img src="img/projects/img-pink.jpg" alt="Pink Информационный сайт
               для досуга и отдыха" width="360" height="576" />
             </div>
@@ -155,7 +159,6 @@
           <!-- Карточка проекта 3-->
           <li class="catalog-item">
             <div class="catalog-item-image">
-              <!-- Изображение с 3 точками в css -->
               <img src="img/projects/img-barbershop.jpg" alt="Barbershop Красота и здоровье для мужчин" width="360"
                 height="576" />
             </div>
@@ -173,7 +176,6 @@
           <!-- Карточка проекта 4-->
           <li class="catalog-item">
             <div class="catalog-item-image">
-              <!-- Изображение с 3 точками в css -->
               <img src="img/projects/img-mishka.jpg" alt="Mishka Товары для дома, вязанные игрушки и предметы"
                 width="360" height="576" />
             </div>
@@ -191,7 +193,6 @@
           <!-- Карточка проекта 5-->
           <li class="catalog-item">
             <div class="catalog-item-image">
-              <!-- Изображение с 3 точками в css -->
               <img src="img/projects/img-aplus.jpg" alt="Aplus Онлайн обучение. Учись чему то новому" width="360"
                 height="576" />
             </div>
@@ -209,7 +210,6 @@
           <!-- Карточка проекта 6-->
           <li class="catalog-item">
             <div class="catalog-item-image">
-              <!-- Изображение с 3 точками в css -->
               <img src="img/projects/img-kvast.jpg" alt="Kvast Русский квас по секретному древнему рецепту" width="360"
                 height="576" />
             </div>
@@ -225,21 +225,25 @@
           </li>
           <!-- /Карточка проекта 6-->
         </ul>
+
         <!-- Пагинация, номер страницы -->
-          <ul class="pagination-list" aria-label="Номер страницы">
-            <li class="pagination-item pagination-item--current" aria-label="Текущая страница">
-              <a class="button">1</a>
+        <div>
+          <h3 class="visually-hidden">Страницы с проектами</h3>
+          <ul class="pagination-list">
+            <li class="pagination-item pagination-item--current">
+              <a class="button" aria-label="Текущая страница номер">1</a>
             </li>
             <li class="pagination-item">
-              <a class="button" href="">2</a>
+              <a class="button" href="" aria-label="Cтраница номер">2</a>
             </li>
             <li class="pagination-item">
-              <a class="button" href="">3</a>
+              <a class="button" href="" aria-label="Cтраница номер">3</a>
             </li>
             <li class="pagination-item">
-              <a class="button " href="">Следующая</a>
+              <a class="button " href="">Следующая <span class="visually-hidden">страница</span></a>
             </li>
           </ul>
+        </div>
         <!-- /Пагинация, номер страницы -->
       </section>
     </div>
