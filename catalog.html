@@ -29,10 +29,13 @@
           <a class="main-nav-link main-nav-link--current" aria-label="Текущая страница">Магазин</a>
         </li> <!-- Текущая страница -->
         <li>
-          <a class="main-nav-link" href="">Контакты</a></li>
+          <a class="main-nav-link" href="">Контакты</a>
+        </li>
       </ul>
       <ul class="main-nav-buy">
-        <li><a class="main-nav-link main-nav-link--basket" href="">Корзина</a></li>
+        <li>
+          <a class="main-nav-link main-nav-link--basket" href="">Корзина</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -227,20 +230,20 @@
         </ul>
 
         <!-- Пагинация, номер страницы -->
-        <div>
-          <h3 class="visually-hidden">Страницы с проектами</h3>
-          <ul class="pagination-list">
-            <li class="pagination-item pagination-item--current">
+        <div class="pagination">
+          <h3 class="visually-hidden">Список страниц</h3>
+          <ul class="pagination-list" aria-label="Список страниц">
+            <li class="pagination-number pagination-number--current">
               <a class="button" aria-label="Текущая страница номер">1</a>
             </li>
-            <li class="pagination-item">
+            <li class="pagination-number">
               <a class="button" href="" aria-label="Cтраница номер">2</a>
             </li>
-            <li class="pagination-item">
+            <li class="pagination-number">
               <a class="button" href="" aria-label="Cтраница номер">3</a>
             </li>
-            <li class="pagination-item">
-              <a class="button " href="">Следующая <span class="visually-hidden">страница</span></a>
+            <li class="pagination-word">
+              <a class="button" href="">Следующая<span class="visually-hidden">страница</span></a>
             </li>
           </ul>
         </div>
@@ -251,7 +254,8 @@
     <!-- Контакты и карта -->
     <section class="main-map">
       <h2 class="visually-hidden">Контакты и карта</h2>
-      <img src="img/layout/img-map.png" alt="карта с адресом Нёрдс" width="1440" height="416" />
+      <img class="main-map-marker" src="img/layout/img-map-marker.png" alt="Маркер на карте с логотипом" />
+      <img class="main-map-img" src="img/layout/img-map.png" alt="карта с адресом Нёрдс" width="1440" height="416" />
     </section>
     <!-- /Контакты и карта -->
   </main>
