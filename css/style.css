@@ -785,6 +785,8 @@ h4 {
 /* Переопределяем свойства тега button */
 .button--filters {
   border: none;
+  outline: none;
+  cursor: pointer;
   min-width: 260px;
   padding: 1px 15px 0;
 }
