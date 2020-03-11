@@ -61,18 +61,18 @@
             <ul class="filters-list">
               <li>
                 <input class="visually-hidden filters-input filters-input--radio" type="radio" name="grid-type"
-                  value="bootstrap" id="grid-type-bootstrap" checked>
-                <label for="grid-type-bootstrap">Адаптивная</label>
+                  value="bootstrap" id="grid-type-bootstrap" tabindex="-1" checked />
+                <label for="grid-type-bootstrap" tabindex="0">Адаптивная</label>
               </li>
               <li>
                 <input class="visually-hidden filters-input filters-input--radio" type="radio" name="grid-type"
-                  value="fixed" id="grid-type-fixed">
-                <label for="grid-type-fixed">Фиксированная</label>
+                  value="fixed" id="grid-type-fixed" tabindex="-1" />
+                <label for="grid-type-fixed" tabindex="0">Фиксированная</label>
               </li>
               <li>
                 <input class="visually-hidden filters-input filters-input--radio" type="radio" name="grid-type"
-                  value="fluid" id="grid-type-fluid">
-                <label for="grid-type-fluid">Резиновая</label>
+                  value="fluid" id="grid-type-fluid" tabindex="-1" />
+                <label for="grid-type-fluid" tabindex="0">Резиновая</label>
               </li>
             </ul>
           </fieldset>
@@ -81,28 +81,28 @@
             <ul class="filters-list">
               <li>
                 <input class="visually-hidden filters-input filters-input--checkbox" type="checkbox"
-                  name="feature-slideshow" id="filter-slideshow" checked />
-                <label for="filter-slideshow">Слайдер</label>
+                  name="feature-slideshow" id="filter-slideshow" tabindex="-1" checked />
+                <label for="filter-slideshow" tabindex="0">Слайдер</label>
               </li>
               <li>
                 <input class="visually-hidden filters-input filters-input--checkbox" type="checkbox"
-                  name="feature-block" id="filter-block" />
-                <label for="filter-block">Блок преимуществ</label>
+                  name="feature-block" id="filter-block" tabindex="-1" />
+                <label for="filter-block" tabindex="0">Блок преимуществ</label>
               </li>
               <li>
                 <input class="visually-hidden filters-input filters-input--checkbox" type="checkbox" name="feature-news"
-                  id="filter-news" checked />
-                <label for="filter-news">Новости</label>
+                  id="filter-news" tabindex="-1" checked />
+                <label for="filter-news" tabindex="0">Новости</label>
               </li>
               <li>
                 <input class="visually-hidden filters-input filters-input--checkbox" type="checkbox"
-                  name="feature-gallery" id="filter-gallery" disabled />
-                <label for="filter-gallery">Галерея</label>
+                  name="feature-gallery" id="filter-gallery" tabindex="-1" disabled />
+                <label for="filter-gallery" tabindex="-1">Галерея</label>
               </li>
               <li>
                 <input class="visually-hidden filters-input filters-input--checkbox" type="checkbox"
-                  name="feature-basket" id="filter-basket" />
-                <label for="filter-basket">Корзина</label>
+                  name="feature-basket" id="filter-basket" tabindex="-1" />
+                <label for="filter-basket" tabindex="0">Корзина</label>
               </li>
             </ul>
           </fieldset>
@@ -119,6 +119,26 @@
         <div class="sorting">
           <h3>Сортировать:</h3>
 
+          <ul class="sorting-type-list">
+            <li><a class="sorting-link" aria-label="Действующая сортировка">По цене</a></li>
+            <li><a class="sorting-link" href="catalog.html">По типу</a></li>
+            <li><a class="sorting-link" href="catalog.html">По названию</a></li>
+          </ul>
+
+          <div class="sorting-set" aria-label="Направление сортоировки:">
+            <a class="sorting-set-item sorting-descending" aria-label="Действующее направление">
+              <span class="visually-hidden">По убыванию</span>
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="11" height="10" viewBox="0 0 11 10">
+                <path fill="#a6a6a6" d="M5.5 10L0 0h11" />
+              </svg>
+            </a>
+            <a class="sorting-set-item sorting-ascending" href="catalog.html">
+              <span class="visually-hidden">По возрастанию</span>
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="11" height="10" viewBox="0 0 11 10">
+                <path fill="#a6a6a6" d="M5.5 10L0 0h11" />
+              </svg>
+            </a>
+          </div>
         </div>
         <!-- /Секция сортировка -->
 
@@ -254,7 +274,8 @@
     <!-- Контакты и карта -->
     <section class="main-map">
       <h2 class="visually-hidden">Контакты и карта</h2>
-      <img class="main-map-marker" src="img/layout/img-map-marker.png" alt="Маркер на карте с логотипом" width="231" height="190" />
+      <img class="main-map-marker" src="img/layout/img-map-marker.png" alt="Маркер на карте с логотипом" width="231"
+        height="190" />
       <img class="main-map-img" src="img/layout/img-map.png" alt="карта с адресом Нёрдс" width="1440" height="416" />
     </section>
     <!-- /Контакты и карта -->
@@ -263,23 +284,26 @@
 
   <!-- Футер  -->
   <footer class="page-footer central">
-    <div class="footer-social-links">
+    <div class="social-links">
       <p class="visually-hidden">Мы в соцсетях</p>
 
       <ul class="social-links-list">
         <li>
-          <a class="social-link social-link--vk" href="">
+          <a class="social-link" href="">
             <span class="visually-hidden">Вконтакте</span>
+            <img src="img/layout/icon-vk.svg" aria-hidden="true" alt="" width="26" height="15" />
           </a>
         </li>
         <li>
-          <a class="social-link social-link--fb" href="">
+          <a class="social-link" href="">
             <span class="visually-hidden">Facebook</span>
+            <img src="img/layout/icon-fb.svg" aria-hidden="true" alt="" width="12" height="22" />
           </a>
         </li>
         <li>
-          <a class="social-link social-link--insta" href="">
+          <a class="social-link" href="">
             <span class="visually-hidden">Instagram</span>
+            <img src="img/layout/icon-insta.svg" aria-hidden="true" alt="" width="21" height="21" />
           </a>
         </li>
       </ul>
