@@ -97,6 +97,16 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.button[type]:active {
+  outline: none;
+}
+
+.button[type] {
+  border: none;
+  cursor: pointer;
+  padding: 1px 15px 0;
+}
+
 .button:disabled,
 .button--disabled,
 .button--disabled:hover,
@@ -155,17 +165,72 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 
+/* Кнопка-крестик модальное окно */
+
+.button-close {
+  background-color: transparent;
+  display: inline-block;
+  height: 31px;
+  line-height: 31px;
+  margin-right: -5px;
+  margin-top: -6px;
+  opacity: 0.3;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 31px;
+}
+
+.button-close[type] {
+  border: none;
+  cursor: pointer;
+}
+
+.button-close img {
+  vertical-align: middle;
+}
+
+.button-close:hover,
+.button-close:focus {
+  opacity: 1;
+}
+
+.button-close:active {
+  opacity: 0.1;
+}
+
+.button-close[type]:active {
+  outline: none;
+}
+
 /* круглые кнопки, социальные кнопки */
+
 .social-link {
   background-color: #e1e1e1;
   border-radius: 50%;
   display: block;
+}
+
+.social-link::before {
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
   height: 79px;
   width: 79px;
+}
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.social-link--vk::before {
+  background-image: url("../img/layout/icon-vk.svg");
+}
+
+.social-link--fb::before {
+  background-image: url("../img/layout/icon-fb.svg");
+}
+
+.social-link--insta::before {
+  background-image: url("../img/layout/icon-insta.svg");
 }
 
 .social-link:hover,
@@ -178,7 +243,7 @@ a {
   box-shadow: inset 0 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
-.social-link:active img {
+.social-link:active::before {
   opacity: 0.3;
 }
 
@@ -636,18 +701,60 @@ a {
   vertical-align: middle;
 }
 
+.main-map-contacts {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #666666;
+  display: block;
+  height: 308px;
+  line-height: 18px;
+  margin-right: 261px;
+  padding: 49px 50px 20px;
+  position: absolute;
+  top: 54px;
+  right: 50%;
+  width: 319px;
+  z-index: 1;
+}
+
+.main-map-contacts .company {
+  color: #000000;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  margin: 0;
+  margin-bottom: 23px;
+
+  text-transform: uppercase;
+}
+
+.main-map-contacts .address {
+  margin: 0;
+  margin-bottom: 18px;
+  padding-left: 1px;
+}
+
+.main-map-contacts .phone {
+  margin: 0;
+  margin-bottom: 37px;
+  padding-left: 1px;
+}
+
 .main-map-marker {
   display: block;
+  height: 190px;
+  margin-left: 100px;
   position: absolute;
   top: 89px;
   left: 50%;
-  margin-left: 100px;
-  height: 190px;
   width: 231px;
   z-index: 1;
 }
 
-
+.main-map-contacts .button {
+  min-width: 219px;
+}
 
 /* подвал сайта */
 
@@ -813,15 +920,8 @@ a {
 }
 
 /* Переопределяем свойства тега button */
-.button--filters {
-  border: none;
-  cursor: pointer;
+.filters .button {
   min-width: 260px;
-  padding: 1px 15px 0;
-}
-
-.filters :active {
-  outline: 0;
 }
 
 /* Блок сортировка */
@@ -954,6 +1054,10 @@ a {
   width: 360px;
 }
 
+.catalog-item .button {
+  color: #ffffff;
+}
+
 /* Рамка изображения */
 .catalog-item-image::before {
   content: "";
@@ -1063,3 +1167,126 @@ border-color: rgba(0, 1, 1, 0.1)
 .pagination-word .button {
   min-width: 260px;
 }
+
+/* Попап Напишите нам */
+
+.modal-mess {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
+  display: block;
+  height: 590px;
+  margin-left: -480px;
+  padding: 67px 100px;
+  position: fixed;
+  left: 50%;
+  top: 35%;
+  width: 960px;
+  z-index: 2;
+}
+
+.modal-mess h2 {
+  color: #000000;
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 100%;
+  margin: 0;
+  margin-bottom: 41px;
+}
+
+.modal-mess .columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: top;
+  margin-bottom: 47px;
+}
+
+.modal-mess-fullname,
+.modal-mess-email {
+  display: block;
+  width: 360px;
+  margin: 0;
+  margin-bottom: 34px;
+  line-height: 18px;
+}
+
+.modal-mess-fullname span,
+.modal-mess-email span,
+.modal-mess-textarea span {
+  color: #000000;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 9px;
+}
+
+.modal-mess-textarea {
+  width: 100%;
+  line-height: 18px;
+}
+
+.modal-mess-form input,
+.modal-mess-form textarea {
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  padding: 0 13px 1px;
+}
+
+.modal-mess-form textarea {
+  padding-top: 11px;
+}
+
+.modal-mess-form textarea {
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 118px;
+  min-height: 118px;
+}
+
+.modal-mess .button {
+  min-width: 260px;
+}
+
+.modal-mess .button-close {
+  right: 90px;
+  top: 78px;
+}
+
+/* Состояние полей */
+
+.field {
+  background-color: #ffffff;
+  border: solid 2px #d7dcde;
+  color: #444444;
+  font: inherit;
+  vertical-align: top;
+}
+
+.field::placeholder {
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.field:hover {
+  border: solid 2px #b4b9bb;
+}
+
+.field:focus,
+.field[invalid]:focus {
+  border: solid 2px #000000;
+  color: #444444;
+  outline: none;
+}
+
+.field:invalid,
+.field[invalid],
+.field--invalid,
+.field--invalid:hover
+{
+  color: #e74246;
+  border: solid 2px #e74246;
+}
+
+
+
+

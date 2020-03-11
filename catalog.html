@@ -106,7 +106,7 @@
               </li>
             </ul>
           </fieldset>
-          <button class="button button--filters" type="submit">Показать</button>
+          <button class="button" type="submit">Показать</button>
         </form>
         <!-- /форма -->
       </section>
@@ -274,36 +274,42 @@
     <!-- Контакты и карта -->
     <section class="main-map">
       <h2 class="visually-hidden">Контакты и карта</h2>
-      <img class="main-map-marker" src="img/layout/img-map-marker.png" alt="Маркер на карте с логотипом" width="231"
-        height="190" />
+      <div class="main-map-contacts">
+        <p class="company">Nёrds design studio</p>
+        <p class="address">
+          191186, Санкт-Петербург,<br />
+          ул. Б. Конюшенная, д. 19/8<br />
+        </p>
+        <p class="phone">тел. +7 (812) 275-75-75</p>
+        <button class="button button--red" type="button">Напишите нам</button>
+      </div>
+      <img class="main-map-marker" src="img/layout/img-map-marker.png" alt="Маркер на карте с логотипом" />
       <img class="main-map-img" src="img/layout/img-map.png" alt="карта с адресом Нёрдс" width="1440" height="416" />
     </section>
     <!-- /Контакты и карта -->
+
   </main>
   <!-- /Контент  -->
 
-  <!-- Футер  -->
-  <footer class="page-footer central">
+   <!-- Футер  -->
+   <footer class="page-footer central">
     <div class="social-links">
       <p class="visually-hidden">Мы в соцсетях</p>
 
       <ul class="social-links-list">
         <li>
-          <a class="social-link" href="">
+          <a class="social-link social-link--vk" href="">
             <span class="visually-hidden">Вконтакте</span>
-            <img src="img/layout/icon-vk.svg" aria-hidden="true" alt="" width="26" height="15" />
           </a>
         </li>
         <li>
-          <a class="social-link" href="">
+          <a class="social-link social-link--fb" href="">
             <span class="visually-hidden">Facebook</span>
-            <img src="img/layout/icon-fb.svg" aria-hidden="true" alt="" width="12" height="22" />
           </a>
         </li>
         <li>
-          <a class="social-link" href="">
+          <a class="social-link social-link--insta" href="">
             <span class="visually-hidden">Instagram</span>
-            <img src="img/layout/icon-insta.svg" aria-hidden="true" alt="" width="21" height="21" />
           </a>
         </li>
       </ul>
@@ -318,6 +324,7 @@
     </div>
   </footer>
   <!-- /Футер  -->
+
   <!-- Попап Напишите нам -->
   <section>
     <h2>Напишите нам</h2>
