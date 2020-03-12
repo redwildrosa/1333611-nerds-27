@@ -808,7 +808,7 @@ a {
 /* Колонки каталога */
 
 .catalog-columns {
-  padding-top: 53px;
+  padding-top: 52px;
   padding-bottom: 59px;
 
   display: flex;
@@ -829,15 +829,6 @@ a {
   padding-left: 1px;
 }
 
-.filters-part--buy {
-  min-height: 266px;
-  margin: 0;
-}
-
-.filters-part--features {
-  margin-bottom: 47px;
-}
-
 .filters legend,
 .sorting h3 {
   color: #000000;
@@ -853,6 +844,121 @@ a {
 .sorting h3 {
   margin: 0;
   margin-right: 30px;
+}
+
+.filters-part--buy legend {
+  padding-top: 3px;
+}
+
+/* Range - ползунок, фильтр стоимость */
+
+.filters-part--buy {
+  min-height: 267px;
+  margin: 0;
+  padding: 0;
+}
+
+.range-filter {
+  width: 260px;
+  margin: 34px 0;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+
+  height: 41px;
+  margin-bottom: 14px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: #eeeeee;
+
+  border-radius: 4px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 30px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 17px;
+}
+
+.range-controls .toggle-max {
+  left: 159px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  box-sizing: border-box;
+  width: 80px;
+  padding: 8px 0 8px;
+  margin: 0;
+  margin-left: 8px;
+
+  font-size: 16px;
+  text-align: center;
+  line-height: 22px;
+
+  border: none;
+  border-radius: 3px;
+  background-color: #eeeeee;
+  vertical-align: baseline;
+}
+
+.max-price {
+  text-align: right;
+}
+
+/* Форма - Сетка и Особенности */
+
+.filters-part--features {
+  margin-bottom: 47px;
 }
 
 .filters-list {
@@ -1105,7 +1211,7 @@ border-color: rgba(0, 1, 1, 0.1)
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 27px 15px;
+  padding: 26px 15px;
   text-align: center;
   visibility: hidden;
   width: 360px;
@@ -1286,6 +1392,8 @@ border-color: rgba(0, 1, 1, 0.1)
   color: #e74246;
   border: solid 2px #e74246;
 }
+
+
 
 
 

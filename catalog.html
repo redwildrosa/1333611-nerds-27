@@ -54,7 +54,23 @@
         <form class="filters-form" action="catalog.html" method="get">
           <fieldset class="filters-part filters-part--buy">
             <legend>Стоимость:</legend>
-            <!-- форма стоимость -->
+
+            <!-- Range - ползунок, фильтр стоимость -->
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="margin-left: 0%; width: 70%"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                <label class="max-price">до <input name="max-price" type="text" value="15 000"></label>
+              </div>
+            </div>
+            <!-- /Range - ползунок, фильтр стоимость -->
+
           </fieldset>
           <fieldset class="filters-part">
             <legend>Сетка:</legend>
@@ -291,8 +307,8 @@
   </main>
   <!-- /Контент  -->
 
-   <!-- Футер  -->
-   <footer class="page-footer central">
+  <!-- Футер  -->
+  <footer class="page-footer central">
     <div class="social-links">
       <p class="visually-hidden">Мы в соцсетях</p>
 
@@ -336,7 +352,8 @@
         </label>
         <label class="modal-mess-email">
           <span>Ваш e-mail:</span>
-          <input class="field" type="email" name="email" placeholder="email@example.com" aria-required="true" required />
+          <input class="field" type="email" name="email" placeholder="email@example.com" aria-required="true"
+            required />
         </label>
         <label class="modal-mess-textarea">
           <span>Текст письма:</span>
