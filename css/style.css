@@ -1174,13 +1174,15 @@ border-color: rgba(0, 1, 1, 0.1)
   background-color: #ffffff;
   box-sizing: border-box;
   box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
-  display: block;
+  /* включение модального окна */
+  /* display: block; */
   height: 590px;
   margin-left: -480px;
+  margin-top: -295px;
   padding: 67px 100px;
   position: fixed;
   left: 50%;
-  top: 35%;
+  top: 50%;
   width: 960px;
   z-index: 2;
 }
@@ -1278,14 +1280,13 @@ border-color: rgba(0, 1, 1, 0.1)
   outline: none;
 }
 
-.field:invalid,
 .field[invalid],
 .field--invalid,
-.field--invalid:hover
-{
+.field--invalid:hover {
   color: #e74246;
   border: solid 2px #e74246;
 }
+
 
 
 

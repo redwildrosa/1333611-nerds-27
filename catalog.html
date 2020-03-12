@@ -326,24 +326,29 @@
   <!-- /Футер  -->
 
   <!-- Попап Напишите нам -->
-  <section>
+  <section class="modal-mess" hidden>
     <h2>Напишите нам</h2>
-    <form action="catalog.html" method="post">
-      <label class="part-half">
-        Ваше имя:
-        <input type="text" name="fullname" placeholder="Имя Фамилия" />
-      </label>
-      <label class="part-half">
-        Ваш e-mail:
-        <input type="email" name="email" placeholder="mail@example.ru" />
-      </label>
-      <label class="part-full">
-        Текст письма:
-        <textarea name="comment" placeholder="В свободной форме"></textarea>
-      </label>
-      <button type="submit">Отправить</button>
+    <form class="modal-mess-form" action="index.html" method="post">
+      <div class="columns">
+        <label class="modal-mess-fullname">
+          <span>Ваше имя:</span>
+          <input class="field" type="text" name="fullname" placeholder="Имя Фамилия" aria-required="true" required />
+        </label>
+        <label class="modal-mess-email">
+          <span>Ваш e-mail:</span>
+          <input class="field" type="email" name="email" placeholder="email@example.com" aria-required="true" required />
+        </label>
+        <label class="modal-mess-textarea">
+          <span>Текст письма:</span>
+          <textarea class="field" name="comment" placeholder="В свободной форме"></textarea>
+        </label>
+      </div>
+      <button class="button button--red" type="submit">Отправить</button>
     </form>
-    <button type="button"><span class="visually-hidden">Закрыть</span></button> <!-- декор icon-cross -->
+    <!-- декор icon-cross -->
+    <button class="button-close" type="button">
+      <img src="img/layout/icon-cross-close.svg" alt="Закрыть" width="21" height="21" />
+    </button>
   </section>
   <!-- /Попап Напишите нам -->
 </body>
