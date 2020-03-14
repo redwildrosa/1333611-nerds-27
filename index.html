@@ -6,7 +6,6 @@
   <title>Дизайн-студия Нёрдс</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <!-- <link rel="stylesheet" href="css/stylish.css"> -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -156,7 +155,7 @@
       <h2 class="visually-hidden">Сотрудничество с компаниями</h2>
       <ul class="main-partners-list">
         <li>
-          <a href="" target="_blank">
+          <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
             <img src="img/partners/img-htmlacademy-logo.png" alt="HTMLacademy Логотип" width="199" height="68" />
           </a>
         </li>
@@ -182,17 +181,17 @@
     <!-- Контакты и карта -->
     <section class="main-map">
       <h2 class="visually-hidden">Контакты и карта</h2>
-      <div class="main-map-contacts">
-        <p class="company">Nёrds design studio</p>
-        <p class="address">
-          191186, Санкт-Петербург,<br />
-          ул. Б. Конюшенная, д. 19/8<br />
-        </p>
-        <p class="phone">тел. +7 (812) 275-75-75</p>
-        <button class="button button--red" type="button">Напишите нам</button>
-      </div>
       <img class="main-map-marker" src="img/layout/img-map-marker.png" alt="Маркер на карте с логотипом" />
       <img class="main-map-img" src="img/layout/img-map.png" alt="карта с адресом Нёрдс" width="1440" height="416" />
+      <div class="main-map-contacts">
+        <p class="main-map-company">Nёrds design studio</p>
+        <p class="main-map-address">
+          191186, Санкт-Петербург,
+          ул. Б. Конюшенная, д. 19/8
+        </p>
+        <p class="main-map-phone">тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
+        <button class="button button--red" type="button">Напишите нам</button>
+      </div>
     </section>
     <!-- /Контакты и карта -->
 
@@ -238,25 +237,23 @@
     <h2>Напишите нам</h2>
     <form class="modal-mess-form" action="index.html" method="post">
       <div class="columns">
-        <label class="modal-mess-fullname">
+        <label class="modal-mess-field">
           <span>Ваше имя:</span>
-          <input class="field" type="text" name="fullname" placeholder="Имя Фамилия" aria-required="true" required />
+          <input class="field" invalid value="error" type="text" name="fullname" placeholder="Имя Фамилия" required />
         </label>
-        <label class="modal-mess-email">
+        <label class="modal-mess-field">
           <span>Ваш e-mail:</span>
-          <input class="field" type="email" name="email" placeholder="email@example.com" aria-required="true" required />
+          <input class="field" value="" type="email" name="email" placeholder="email@example.com" required />
         </label>
         <label class="modal-mess-textarea">
           <span>Текст письма:</span>
           <textarea class="field" name="comment" placeholder="В свободной форме"></textarea>
         </label>
       </div>
-      <button class="button button--red" type="submit">Отправить</button>
+      <a class="button button--red" href="">Отправить</a>
     </form>
     <!-- декор icon-cross -->
-    <button class="button-close" type="button">
-      <img src="img/layout/icon-cross-close.svg" alt="Закрыть" width="21" height="21" />
-    </button>
+    <button class="button-close" type="button" aria-label="Закрыть"></button>
   </section>
   <!-- /Попап Напишите нам -->
 </body>
