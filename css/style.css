@@ -46,7 +46,6 @@ a {
 
 .central {
   margin: 0 auto;
-  padding: 0 20px;
   width: 1160px;
 }
 
@@ -723,11 +722,10 @@ a {
   line-height: 30px;
   margin: 0;
   margin-bottom: 23px;
-
   text-transform: uppercase;
 }
 
-.main-map-contacts p {
+.main-map-company ~ p {
   margin: 0;
   margin-bottom: 18px;
   padding-left: 1px;
@@ -966,6 +964,7 @@ a {
   line-height: 20px;
   padding: 5px 15px 0 1px;
   user-select: none; /* отменяем выделение текста подписи цветом */
+  vertical-align: top;
 }
 
 .filters-input+label::before {
