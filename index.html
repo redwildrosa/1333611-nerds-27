@@ -48,6 +48,19 @@
     <section class="main-slideshows">
       <h2 class="visually-hidden">Статьи о нашей работе</h2>
       <div class="central">
+
+        <!-- Управление для салдера -->
+        <input class="visually-hidden" type="radio" name="main-slideshows" id="slide-phones" checked />
+        <input class="visually-hidden" type="radio" name="main-slideshows" id="slide-imacs" />
+        <input class="visually-hidden" type="radio" name="main-slideshows" id="slide-pads" />
+
+        <div class="main-slideshows-control">
+          <label for="slide-phones"><span class="visually-hidden">Статья-1</span></label>
+          <label for="slide-imacs"><span class="visually-hidden">Статья-2</span></label>
+          <label for="slide-pads"><span class="visually-hidden">Статья-3</span></label>
+        </div>
+        <!-- /Управление для салдера -->
+
         <article class="main-slideshows-item main-slideshows-item--phones">
           <div class="main-slideshows-info">
             <h3>Долго, дорого, скрупулезно.</h3>
@@ -58,7 +71,7 @@
           </div>
         </article>
 
-        <article class="main-slideshows-item main-slideshows-item--imacs" hidden>
+        <article class="main-slideshows-item main-slideshows-item--imacs">
           <div class="main-slideshows-info">
             <h3>Любим математику как никто другой</h3>
             <p>
@@ -68,7 +81,7 @@
           </div>
         </article>
 
-        <article class="main-slideshows-item main-slideshows-item--pads" hidden>
+        <article class="main-slideshows-item main-slideshows-item--pads">
           <div class="main-slideshows-info">
             <h3>Только ночь, только хардкор</h3>
             <p>
@@ -181,8 +194,10 @@
     <!-- Контакты и карта -->
     <section class="main-map">
       <h2 class="visually-hidden">Контакты и карта</h2>
-      <img class="main-map-marker" src="img/layout/img-map-marker.png" alt="Маркер на карте с логотипом" width="231" height="190"/>
-      <img class="main-map-img" src="img/layout/img-map.png" alt="карта с адресом Нёрдс" width="1440" height="416" />
+      <img class="main-map-marker" src="img/layout/img-map-marker.png" alt="Маркер на карте с логотипом" width="231"
+        height="190" />
+      <img class="main-map-img" src="img/layout/img-map.png" alt="Адрес Нёрдс: 191186, Санкт-Петербург,
+      ул. Б. Конюшенная, д. 19/8" width="1440" height="416" />
       <div class="main-map-contacts">
         <p class="main-map-company">Nёrds design studio</p>
         <p class="main-map-address">
@@ -190,7 +205,7 @@
           ул. Б. Конюшенная, д. 19/8
         </p>
         <p class="main-map-phone">тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-        <a href="" class="button button--red">Напишите нам</a>
+        <a href="modal-mess.html" class="button button--red">Напишите нам</a>
       </div>
     </section>
     <!-- /Контакты и карта -->
@@ -239,7 +254,7 @@
       <div class="columns">
         <label class="modal-mess-field">
           <span>Ваше имя:</span>
-          <input class="field" invalid value="error" type="text" name="fullname" placeholder="Имя Фамилия" required />
+          <input class="field field--invalid" value="error" type="text" name="fullname" placeholder="Имя Фамилия" required />
         </label>
         <label class="modal-mess-field">
           <span>Ваш e-mail:</span>

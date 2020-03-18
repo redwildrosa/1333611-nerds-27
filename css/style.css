@@ -78,8 +78,7 @@ a {
   display: inline-block;
   font: inherit;
   font-weight: 500;
-  line-height: 49px;
-  padding: 1px 15px 0;
+  padding: 14px 15px 12px;
   text-align: center;
   text-transform: uppercase;
   min-width: 50px;
@@ -104,7 +103,6 @@ a {
 .button[type] {
   border: none;
   cursor: pointer;
-  padding: 1px 15px 0;
 }
 
 /* Красная кнопка */
@@ -252,6 +250,7 @@ a {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  padding-bottom: 1px;
   text-transform: uppercase;
 
   display: flex;
@@ -385,28 +384,30 @@ a {
 
 .main-slideshows {
   background-color: #eeeeee;
+  position: relative;
 }
 
 .main-slideshows-item {
   box-sizing: border-box;
   background-repeat: no-repeat;
-  height: 431px;
-  padding-top: 78px;
+  display: none;
+  min-height: 430px;
+  padding: 77px 0 80px;
 }
 
 .main-slideshows-item--phones {
   background-image: url(../img/articles/img-slide-phones.png);
-  background-position: right 31px top 18px;
+  background-position: right 31px bottom 0;
 }
 
 .main-slideshows-item--imacs {
   background-image: url(../img/articles/img-slide-imacs.png);
-  background-position: right 30px top 17px;
+  background-position: right 1px bottom 0;
 }
 
 .main-slideshows-item--pads {
   background-image: url(../img/articles/img-slide-pads.png);
-  background-position: right 30px top 17px;
+  background-position: right 0 bottom 0;
 }
 
 .main-slideshows-info {
@@ -431,6 +432,59 @@ a {
 
 .main-slideshows .button {
   min-width: 240px
+}
+
+.main-slideshows-control {
+  display: block;
+  min-width: 36px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 87px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-slideshows-control label {
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 50%;
+  background-clip: content-box;
+  cursor: pointer;
+  margin-right: -5px;
+  margin-left: 0;
+  padding: 9px;
+  height: 18px;
+  width: 18px;
+  vertical-align: top;
+}
+
+.main-slideshows-control label:last-child {
+  margin-right: -1px;
+}
+
+.main-slideshows-control label::before {
+  content: "";
+  display: block;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  height: 4px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+}
+
+#slide-phones:checked ~ .main-slideshows-control label[for="slide-phones"]::before,
+#slide-imacs:checked ~ .main-slideshows-control label[for="slide-imacs"]::before,
+#slide-pads:checked ~ .main-slideshows-control label[for="slide-pads"]::before  {
+  border-color: #c1c1c1;
+}
+
+#slide-phones:checked ~ .main-slideshows-item--phones,
+#slide-imacs:checked ~ .main-slideshows-item--imacs,
+#slide-pads:checked ~ .main-slideshows-item--pads {
+  display: block;
 }
 
 /* Блок услуги */
@@ -704,10 +758,10 @@ a {
   box-sizing: border-box;
   color: #666666;
   display: block;
-  min-height: 308px;
-  line-height: 18px;
+  height: 308px;
   margin-right: 261px;
   padding: 49px 50px 20px;
+  overflow: auto;
   position: absolute;
   top: 54px;
   right: 50%;
@@ -726,6 +780,7 @@ a {
 }
 
 .main-map-company ~ p {
+  line-height: 18px;
   margin: 0;
   margin-bottom: 18px;
   padding-left: 1px;
@@ -1194,13 +1249,14 @@ border-color: rgba(0, 1, 1, 0.1)
   box-sizing: border-box;
   min-height: 231px;
   max-height: 576px;
-  overflow: hidden;
+  /* Скрытие блока с информацией о проекте */
   opacity: 0;
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 26px 15px;
+  padding: 27px 20px 43px;
   text-align: center;
+  /* Скрытие блока с информацией о проекте */
   visibility: hidden;
   width: 360px;
 }
@@ -1223,7 +1279,9 @@ border-color: rgba(0, 1, 1, 0.1)
 
 .catalog-item-info p {
   line-height: 18px;
+  max-height: 381px;
   margin: 0 auto 30px;
+  overflow: auto;
   width: 200px;
 }
 
@@ -1268,8 +1326,8 @@ border-color: rgba(0, 1, 1, 0.1)
   background-color: #ffffff;
   box-sizing: border-box;
   box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
-  /* включение модального окна */
-  /* display: block; */
+  /* открытие модального окна - по умолчанию открыто */
+  display: block;
   height: 590px;
   margin-left: -480px;
   margin-top: -295px;
