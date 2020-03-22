@@ -472,13 +472,19 @@ a {
   width: 4px;
 }
 
-#slide-phones:hover~.main-slideshows-control label[for="slide-phones"]::before,
-#slide-imacs:hover~.main-slideshows-control label[for="slide-imacs"]::before,
-#slide-pads:hover~.main-slideshows-control label[for="slide-pads"]::before,
 #slide-phones:checked~.main-slideshows-control label[for="slide-phones"]::before,
 #slide-imacs:checked~.main-slideshows-control label[for="slide-imacs"]::before,
 #slide-pads:checked~.main-slideshows-control label[for="slide-pads"]::before {
   border-color: #c1c1c1;
+}
+
+#slide-phones:hover~.main-slideshows-control label[for="slide-phones"]::before,
+#slide-imacs:hover~.main-slideshows-control label[for="slide-imacs"]::before,
+#slide-pads:hover~.main-slideshows-control label[for="slide-pads"]::before,
+#slide-phones:focus~.main-slideshows-control label[for="slide-phones"]::before,
+#slide-imacs:focus~.main-slideshows-control label[for="slide-imacs"]::before,
+#slide-pads:focus~.main-slideshows-control label[for="slide-pads"]::before {
+  border-color: #777777;
 }
 
 #slide-phones:checked~.main-slideshows-item--phones,
