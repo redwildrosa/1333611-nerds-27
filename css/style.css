@@ -33,6 +33,7 @@ a {
 }
 
 /* горизонтальная граница разделов */
+
 .section-border {
   border-bottom: 2px solid #eeeeee;
 }
@@ -48,6 +49,7 @@ a {
 }
 
 /* Стили состояний допол. ссылок заголовков и тестов */
+
 .add-link {
   color: inherit;
 }
@@ -61,8 +63,8 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-
 /* кнопки по умолчанию серая */
+
 .button {
   background-color: #eeeeee;
   box-sizing: border-box;
@@ -100,6 +102,7 @@ a {
 }
 
 /* Красная кнопка */
+
 .button--red {
   background-color: #fb565a;
   color: #ffffff;
@@ -116,6 +119,7 @@ a {
 }
 
 /* Зеленая кнопка */
+
 .button--green {
   background-color: #00ca74;
   color: #ffffff;
@@ -132,6 +136,7 @@ a {
 }
 
 /* Желтая кнопка */
+
 .button--yellow {
   background-color: #efc84a;
   color: #ffffff;
@@ -159,7 +164,7 @@ a {
 
 /* Кнопка-крестик модальное окно */
 
-.button-close {
+.button-cross {
   display: block;
   padding: 0;
   position: absolute;
@@ -167,7 +172,7 @@ a {
   top: 0;
 }
 
-.button-close::before {
+.button-cross::before {
   content: "";
   background: url(../img/layout/icon-cross-close.svg) no-repeat center;
   display: block;
@@ -176,22 +181,22 @@ a {
   width: 31px;
 }
 
-.button-close[type] {
+.button-cross[type] {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.button-close:hover::before,
-.button-close:focus::before {
+.button-cross:hover::before,
+.button-cross:focus::before {
   opacity: 1;
 }
 
-.button-close:active::before {
+.button-cross:active::before {
   opacity: 0.1;
 }
 
-.button-close[type]:active {
+.button-cross[type]:active {
   outline: none;
 }
 
@@ -247,7 +252,6 @@ a {
   line-height: 24px;
   padding-bottom: 1px;
   text-transform: uppercase;
-
   display: flex;
   justify-content: space-between;
 }
@@ -279,7 +283,6 @@ a {
   margin: 0;
   padding: 0;
   padding-top: 21px;
-
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -288,7 +291,6 @@ a {
 .main-nav-site {
   box-sizing: border-box;
   min-width: 700px;
-
   justify-content: center;
 }
 
@@ -306,6 +308,7 @@ a {
 }
 
 /* Кнопки навигации */
+
 .main-nav-link {
   color: #000000;
   display: block;
@@ -434,27 +437,27 @@ a {
   min-width: 36px;
   margin: 0 auto;
   position: absolute;
-  bottom: 87px;
+  bottom: 91px;
   left: 50%;
+  line-height: 0;
+  padding: 5px;
   transform: translateX(-50%);
 }
 
 .main-slideshows-control label {
   display: inline-block;
   background-color: #ffffff;
+  background-size: 9px 9px;
   border-radius: 50%;
-  background-clip: content-box;
   cursor: pointer;
-  margin-right: -5px;
+  margin-right: 13px;
   margin-left: 0;
-  padding: 9px;
-  height: 18px;
-  width: 18px;
+  padding: 5px;
   vertical-align: top;
 }
 
 .main-slideshows-control label:last-child {
-  margin-right: -1px;
+  margin-right: 0;
 }
 
 .main-slideshows-control label::before {
@@ -464,12 +467,14 @@ a {
   border-radius: 50%;
   height: 4px;
   position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  top: 0;
   width: 4px;
 }
 
+#slide-phones:hover~.main-slideshows-control label[for="slide-phones"]::before,
+#slide-imacs:hover~.main-slideshows-control label[for="slide-imacs"]::before,
+#slide-pads:hover~.main-slideshows-control label[for="slide-pads"]::before,
 #slide-phones:checked~.main-slideshows-control label[for="slide-phones"]::before,
 #slide-imacs:checked~.main-slideshows-control label[for="slide-imacs"]::before,
 #slide-pads:checked~.main-slideshows-control label[for="slide-pads"]::before {
@@ -493,7 +498,6 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -555,7 +559,6 @@ a {
 .main-article {
   padding-top: 40px;
   padding-bottom: 73px;
-
   display: flex;
   justify-content: space-between;
 }
@@ -637,7 +640,6 @@ a {
 .main-article dl {
   margin: 0;
   width: 360px;
-
   display: flex;
   flex-wrap: wrap;
 }
@@ -656,7 +658,6 @@ a {
   line-height: 100%;
   margin-bottom: 19px;
   text-transform: uppercase;
-
   order: -1;
 }
 
@@ -667,7 +668,6 @@ a {
 .main-article-statistics sup {
   font-size: 27px;
   vertical-align: 2px;
-
 }
 
 /* Сотрудничество с компаниями */
@@ -681,7 +681,6 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -692,7 +691,6 @@ a {
   height: 120px;
   position: relative;
   width: 260px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -756,6 +754,24 @@ a {
   left: 50%;
 }
 
+.main-map-iframe {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.main-map-marker {
+  display: block;
+  height: 190px;
+  margin-left: 100px;
+  position: absolute;
+  top: 89px;
+  left: 50%;
+  width: 231px;
+}
+
 .main-map-contacts {
   background-color: #ffffff;
   box-sizing: border-box;
@@ -800,24 +816,12 @@ a {
   min-width: 219px;
 }
 
-.main-map-marker {
-  display: block;
-  height: 190px;
-  margin-left: 100px;
-  position: absolute;
-  top: 89px;
-  left: 50%;
-  width: 231px;
-  z-index: 1;
-}
-
 /* подвал сайта */
 
 .page-footer {
   box-sizing: border-box;
   min-height: 218px;
   padding-top: 69px;
-
   display: flex;
   align-items: flex-start;
 }
@@ -831,7 +835,6 @@ a {
   margin: 0;
   padding: 0;
   width: 280px;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -867,7 +870,6 @@ a {
 .catalog-columns {
   padding-top: 52px;
   padding-bottom: 59px;
-
   display: flex;
   justify-content: space-between;
 }
@@ -1020,14 +1022,14 @@ a {
 }
 
 .filters-input+label {
-  cursor: pointer;
   /* курсор с указателем, у полей действует как ховер */
+  cursor: pointer;
   display: inline-block;
   font-size: 16px;
   line-height: 20px;
   padding: 5px 15px 0 1px;
-  user-select: none;
   /* отменяем выделение текста подписи цветом */
+  user-select: none;
   vertical-align: top;
 }
 
@@ -1086,7 +1088,6 @@ a {
 
 .sorting {
   margin-bottom: 50px;
-
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -1097,7 +1098,6 @@ a {
   margin: 0;
   margin-left: auto;
   padding: 0;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -1129,7 +1129,6 @@ a {
 .sorting-set {
   margin-right: -9px;
   min-width: 88px;
-
   display: flex;
   justify-content: flex-end;
 }
@@ -1169,7 +1168,6 @@ a {
   margin: 0;
   padding: 0;
   margin-bottom: 28px;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1184,7 +1182,13 @@ a {
   width: 360px;
 }
 
-.catalog-item:hover {
+.catalog-item:focus-within {
+  /* Совместно полифил для IE */
+  box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+.catalog-item:hover,
+.catalog-item:focus {
   box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -1203,7 +1207,13 @@ a {
   z-index: 1;
 }
 
-.catalog-item:hover::before {
+.catalog-item:focus-within::before {
+  /* Совместно полифил для IE */
+  opacity: 1;
+}
+
+.catalog-item:hover::before,
+.catalog-item:focus::before {
   opacity: 1;
 }
 
@@ -1217,6 +1227,7 @@ a {
 }
 
 /* Рамка изображения */
+
 .catalog-item-image::before {
   content: "";
   box-sizing: border-box;
@@ -1228,11 +1239,18 @@ a {
   width: inherit;
 }
 
-.catalog-item:hover .catalog-item-image::before {
+.catalog-item:focus-within .catalog-item-image::before {
+  /* Совместно полифил для IE */
+  border-color: transparent;
+}
+
+.catalog-item:hover .catalog-item-image::before,
+.catalog-item:focus .catalog-item-image::before {
   border-color: transparent;
 }
 
 /* Рамка карточки */
+
 .catalog-item-image::after {
   content: "";
   border: 1px solid transparent;
@@ -1243,11 +1261,17 @@ a {
   bottom: 0;
 }
 
+.catalog-item:focus-within .catalog-item-image::after {
+  /* Совместно полифил для IE */
+  border-color: rgba(0, 1, 1, 0.1)
+}
+
+.catalog-item:focus .catalog-item-image::after,
 .catalog-item:hover .catalog-item-image::after {
   border-color: rgba(0, 1, 1, 0.1)
 }
 
-.catalog-item-image img {
+.catalog-item-image {
   /* убираем отступы у картинки снизу от высоты строки */
   vertical-align: middle;
 }
@@ -1265,14 +1289,17 @@ a {
   left: 0;
   padding: 27px 20px 43px;
   text-align: center;
-  /* Скрытие блока с информацией о проекте */
-  visibility: hidden;
   width: 360px;
 }
 
-.catalog-item:hover .catalog-item-info {
+.catalog-item:focus-within .catalog-item-info {
+  /* Совместно полифил для IE */
   opacity: 1;
-  visibility: visible;
+}
+
+.catalog-item:hover .catalog-item-info,
+.catalog-item:focus .catalog-item-info {
+  opacity: 1;
 }
 
 .catalog-item-info h3 {
@@ -1336,21 +1363,71 @@ a {
 
 /* Попап Напишите нам */
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal-mess {
   background-color: #ffffff;
   box-sizing: border-box;
   box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
-  /* открытие модального окна - по умолчанию открыто */
-  /* display: block; */
-  height: 590px;
+  display: none;
+  min-height: 590px;
   margin-left: -480px;
   margin-top: -295px;
-  padding: 67px 100px;
+  padding: 67px 100px 84px;
   position: fixed;
   left: 50%;
   top: 50%;
   width: 960px;
   z-index: 2;
+}
+
+/* открытие модального окна - по умолчанию закрыто (при использовани JS) */
+
+.modal-mess--open {
+  animation: bounce 0.6s;
+  display: block;
+}
+
+.modal-mess--error {
+  animation: shake 0.6s;
 }
 
 .modal-mess h2 {
@@ -1364,11 +1441,11 @@ a {
 }
 
 .modal-mess .columns {
+  margin-bottom: 47px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 47px;
 }
 
 .modal-mess-field {
@@ -1393,18 +1470,19 @@ a {
 }
 
 .modal-mess-form textarea {
-  min-width: 100%;
-  max-width: 100%;
-  max-height: 118px;
-  min-height: 118px;
+  resize: none;
+  height: 118px;
+  overflow: auto;
   padding-top: 11px;
+  padding-bottom: 11px;
+  width: 100%;
 }
 
 .modal-mess .button {
   min-width: 260px;
 }
 
-.modal-mess .button-close {
+.modal-mess .button-cross {
   right: 85px;
   top: 72px;
 }

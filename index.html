@@ -6,7 +6,7 @@
   <title>Дизайн-студия Нёрдс</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-min.css">
 </head>
 
 <body>
@@ -46,7 +46,7 @@
 
     <!-- Слайдер  -->
     <section class="main-slideshows">
-      <h2 class="visually-hidden">Статьи о нашей работе</h2>
+      <h2 class="visually-hidden">Слайдшоу о нашей работе</h2>
       <div class="central">
 
         <!-- Управление для слайдера -->
@@ -54,10 +54,10 @@
         <input class="visually-hidden" type="radio" name="main-slideshows" id="slide-imacs" />
         <input class="visually-hidden" type="radio" name="main-slideshows" id="slide-pads" />
 
-        <div class="main-slideshows-control">
-          <label for="slide-phones"><span class="visually-hidden">Статья-1</span></label>
-          <label for="slide-imacs"><span class="visually-hidden">Статья-2</span></label>
-          <label for="slide-pads"><span class="visually-hidden">Статья-3</span></label>
+        <div class="main-slideshows-control" aria-label="Список слайдов">
+          <label tabindex="-1" for="slide-phones"><span class="visually-hidden">Слайд-1</span></label>
+          <label tabindex="-1" for="slide-imacs"><span class="visually-hidden">Слайд-2</span></label>
+          <label tabindex="-1" for="slide-pads"><span class="visually-hidden">Слайд-3</span></label>
         </div>
         <!-- /Управление для слайдера -->
 
@@ -194,15 +194,16 @@
     <!-- Контакты и карта -->
     <section class="main-map">
       <h2 class="visually-hidden">Контакты и карта</h2>
-      <img class="main-map-marker" src="img/layout/img-map-marker.png" alt="Маркер на карте с логотипом" width="231" height="190" />
       <img class="main-map-img" src="img/layout/img-map.png" alt="Адрес Нёрдс: 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="1440" height="416" />
+      <img class="main-map-marker" src="img/layout/img-map-marker.png" alt="Маркер на карте с логотипом" width="231" height="190" />
+      <iframe class="main-map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3017717523439!2d30.321287870545845!3d59.93872052623401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1584848310967!5m2!1sru!2sru" width="1440" height="416" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       <div class="main-map-contacts">
         <p class="main-map-company">Nёrds design studio</p>
         <p class="main-map-address">
           191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
         </p>
         <p class="main-map-phone">тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-        <a href="modal-mess.html" class="button button--red">Напишите нам</a>
+        <a class="button button--red" href="modal-mess.html">Напишите нам</a>
       </div>
     </section>
     <!-- /Контакты и карта -->
@@ -251,7 +252,7 @@
       <div class="columns">
         <label class="modal-mess-field">
           <span>Ваше имя:</span>
-          <input class="field field--invalid" value="error" type="text" name="fullname" placeholder="Имя Фамилия" required />
+          <input class="field" value="" type="text" name="fullname" placeholder="Имя Фамилия" required />
         </label>
         <label class="modal-mess-field">
           <span>Ваш e-mail:</span>
@@ -265,9 +266,11 @@
       <button class="button button--red" type="submit">Отправить</button>
     </form>
     <!-- декор icon-cross -->
-    <button class="button-close" type="button" aria-label="Закрыть"></button>
+    <button class="button-cross" type="button" aria-label="Закрыть"></button>
   </section>
   <!-- /Попап Напишите нам -->
+
+  <script src="js/modalMess-min.js"></script>
 </body>
 
 </html>
