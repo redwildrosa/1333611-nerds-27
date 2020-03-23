@@ -472,25 +472,24 @@ a {
   width: 4px;
 }
 
+#slide-phones:checked~.main-slideshows-item--phones,
+#slide-imacs:checked~.main-slideshows-item--imacs,
+#slide-pads:checked~.main-slideshows-item--pads {
+  display: block;
+}
+
+.main-slideshows-control label:hover::before,
 #slide-phones:checked~.main-slideshows-control label[for="slide-phones"]::before,
 #slide-imacs:checked~.main-slideshows-control label[for="slide-imacs"]::before,
 #slide-pads:checked~.main-slideshows-control label[for="slide-pads"]::before {
   border-color: #c1c1c1;
 }
 
-#slide-phones:hover~.main-slideshows-control label[for="slide-phones"]::before,
-#slide-imacs:hover~.main-slideshows-control label[for="slide-imacs"]::before,
-#slide-pads:hover~.main-slideshows-control label[for="slide-pads"]::before,
-#slide-phones:focus~.main-slideshows-control label[for="slide-phones"]::before,
-#slide-imacs:focus~.main-slideshows-control label[for="slide-imacs"]::before,
-#slide-pads:focus~.main-slideshows-control label[for="slide-pads"]::before {
-  border-color: #777777;
-}
-
-#slide-phones:checked~.main-slideshows-item--phones,
-#slide-imacs:checked~.main-slideshows-item--imacs,
-#slide-pads:checked~.main-slideshows-item--pads {
-  display: block;
+.main-slideshows-control label:hover,
+#slide-phones:focus~.main-slideshows-control label[for="slide-phones"],
+#slide-imacs:focus~.main-slideshows-control label[for="slide-imacs"],
+#slide-pads:focus~.main-slideshows-control label[for="slide-pads"] {
+  box-shadow: 0 0 5px 2px #4d4d4d;
 }
 
 /* Блок услуги */
@@ -761,6 +760,7 @@ a {
 }
 
 .main-map-iframe {
+  border: none;
   display: block;
   position: absolute;
   top: 0;
@@ -1189,7 +1189,7 @@ a {
 }
 
 .catalog-item:focus-within {
-  /* Совместно полифил для IE */
+  /* Для совместимости с ИЕ11 нужен полифилл */
   box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -1214,7 +1214,7 @@ a {
 }
 
 .catalog-item:focus-within::before {
-  /* Совместно полифил для IE */
+  /* Для совместимости с ИЕ11 нужен полифилл */
   opacity: 1;
 }
 
@@ -1246,7 +1246,7 @@ a {
 }
 
 .catalog-item:focus-within .catalog-item-image::before {
-  /* Совместно полифил для IE */
+  /* Для совместимости с ИЕ11 нужен полифилл */
   border-color: transparent;
 }
 
@@ -1268,7 +1268,7 @@ a {
 }
 
 .catalog-item:focus-within .catalog-item-image::after {
-  /* Совместно полифил для IE */
+  /* Для совместимости с ИЕ11 нужен полифилл */
   border-color: rgba(0, 1, 1, 0.1)
 }
 
@@ -1299,7 +1299,7 @@ a {
 }
 
 .catalog-item:focus-within .catalog-item-info {
-  /* Совместно полифил для IE */
+  /* Для совместимости с ИЕ11 нужен полифилл */
   opacity: 1;
 }
 
